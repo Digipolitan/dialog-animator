@@ -12,6 +12,10 @@
 		AE77692D1E1274750006644C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE77692B1E1274750006644C /* Main.storyboard */; };
 		AE77692F1E1274750006644C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE77692E1E1274750006644C /* Assets.xcassets */; };
 		AE7769321E1274750006644C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7769301E1274750006644C /* LaunchScreen.storyboard */; };
+		AE77693B1E1276DB0006644C /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77693A1E1276DB0006644C /* AnimatorManager.swift */; };
+		AE7769451E13D2440006644C /* Toast.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7769441E13D2440006644C /* Toast.xib */; };
+		AE7769471E13D2A00006644C /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7769461E13D2A00006644C /* Toast.swift */; };
+		AE7769491E13EBF10006644C /* AnimatorOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7769481E13EBF10006644C /* AnimatorOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		AE77692E1E1274750006644C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE7769311E1274750006644C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE7769331E1274750006644C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE77693A1E1276DB0006644C /* AnimatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorManager.swift; sourceTree = "<group>"; };
+		AE7769441E13D2440006644C /* Toast.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toast.xib; sourceTree = "<group>"; };
+		AE7769461E13D2A00006644C /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		AE7769481E13EBF10006644C /* AnimatorOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,17 @@
 		AE7769261E1274750006644C /* Toast */ = {
 			isa = PBXGroup;
 			children = (
+				AE7769391E1276B80006644C /* App */,
+				AE77693A1E1276DB0006644C /* AnimatorManager.swift */,
+				AE7769481E13EBF10006644C /* AnimatorOptions.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		AE7769391E1276B80006644C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AE7769431E13D2390006644C /* Toast */,
 				AE7769271E1274750006644C /* AppDelegate.swift */,
 				AE7769291E1274750006644C /* ViewController.swift */,
 				AE77692B1E1274750006644C /* Main.storyboard */,
@@ -61,7 +80,16 @@
 				AE7769301E1274750006644C /* LaunchScreen.storyboard */,
 				AE7769331E1274750006644C /* Info.plist */,
 			);
-			path = Toast;
+			name = App;
+			sourceTree = "<group>";
+		};
+		AE7769431E13D2390006644C /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				AE7769441E13D2440006644C /* Toast.xib */,
+				AE7769461E13D2A00006644C /* Toast.swift */,
+			);
+			name = Toast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE7769321E1274750006644C /* LaunchScreen.storyboard in Resources */,
+				AE7769451E13D2440006644C /* Toast.xib in Resources */,
 				AE77692F1E1274750006644C /* Assets.xcassets in Resources */,
 				AE77692D1E1274750006644C /* Main.storyboard in Resources */,
 			);
@@ -137,8 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE77693B1E1276DB0006644C /* AnimatorManager.swift in Sources */,
+				AE7769471E13D2A00006644C /* Toast.swift in Sources */,
 				AE77692A1E1274750006644C /* ViewController.swift in Sources */,
 				AE7769281E1274750006644C /* AppDelegate.swift in Sources */,
+				AE7769491E13EBF10006644C /* AnimatorOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
