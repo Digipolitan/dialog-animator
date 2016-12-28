@@ -59,8 +59,14 @@ open class AnimatorManager {
 		if blurView != nil {
 			blurView?.alpha = 0
 			blurView?.backDrop = options.backDrop
-			container?.addSubview(blurView!)
-			UIView.animate(withDuration: 0.3, animations: { 
+			if container != nil {
+				container?.addSubview(blurView!)
+			}
+			else {
+				UIApplication.shared.delegate!.window!!.addSubview(blurView!)
+			}
+
+			UIView.animate(withDuration: 0.2, animations: {
 				blurView?.alpha = options.blurIntensity
 			})
 		}
@@ -101,8 +107,7 @@ open class AnimatorManager {
 	}
 
 	private func blur(view: UIView?, with effectStyle: UIBlurEffectStyle?) -> AnimatorBlurView? {
-		guard let container = view,
-			let style = effectStyle else {
+		guard let style = effectStyle else {
 				return nil
 		}
 
@@ -110,6 +115,7 @@ open class AnimatorManager {
 			return nil
 		}
 
+		let container = view ?? UIApplication.shared.delegate!.window!!
 		let blurEffect = UIBlurEffect(style: style)
 		let blurEffectView = AnimatorBlurView(effect: blurEffect)
 		blurEffectView.frame = container.bounds
