@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 		self.toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)!.first as! Toast
 		toast.label.text = "Something to notify"
 
-		toast.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 25)
+		toast.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 45)
 
 	}
 
@@ -28,9 +28,12 @@ class ViewController: UIViewController {
 
 	@IBAction func show(_ sender: Any) {
 		let options = AnimatorOptions()
-		options.coverStatusBar = true
-
-		AnimatorManager.default.animate(view: toast, in: self.view, with: options, from: .bottom, to: .top)
+		//options.coverStatusBar = true
+		options.blur = .dark
+		options.blurIntensity = 1
+		options.waiting = true
+		options.backDrop = true
+		options.hold = 3
+		AnimatorManager.default.animate(view: toast, in: self.view, with: options, from: .top)
 	}
 }
-

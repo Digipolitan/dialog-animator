@@ -27,38 +27,68 @@ open class AnimatorManager {
 
 	}
 
+	private var leaveAnimation: ((Void) -> Void)?
+
+	func dismiss() {
+		guard let dismiss = self.leaveAnimation else {
+			return
+		}
+
+		dismiss()
+	}
+
 	func animate(view: UIView, in container: UIView?, with options: AnimatorOptions?, from initial: DGPosition, to final: DGPosition? = nil) {
 		let initialPoint = self.getInitialCoordinates(for: view, in: container, from: initial)
 		let finalPoint	 = self.getFinalCoordinates(for: view, in: container, from: final)
 		let	animatorOptions = options ?? AnimatorOptions()
 
-		self.animate(view: view, in: container, from: initialPoint, to: finalPoint, options: animatorOptions)
+		self.animate(view: view, in: container, with: animatorOptions, initialPoint: initialPoint, finalPoint: finalPoint)
 	}
 
-	func animate(view: UIView, in container: UIView?, from initialPosition: CGPoint, to finalPosition: CGPoint, options: AnimatorOptions) {
+	func animate(view: UIView, in container: UIView?, with options: AnimatorOptions, initialPoint: CGPoint, finalPoint: CGPoint) {
 		guard (container  == nil || !options.coverStatusBar) else {
 			fatalError("cannot cover status bar with a container")
 		}
 
 		let wrapper = (container == nil && options.coverStatusBar) ? self.wrap(view: view) : view
-		wrapper.frame.origin = initialPosition
+		wrapper.frame.origin = initialPoint
+
+
+		let blurView = self.blur(view: container, with: options.blur)
+
+		if blurView != nil {
+			blurView?.alpha = 0
+			blurView?.backDrop = options.backDrop
+			container?.addSubview(blurView!)
+			UIView.animate(withDuration: 0.3, animations: { 
+				blurView?.alpha = options.blurIntensity
+			})
+		}
 
 		container?.addSubview(wrapper)
+		self.leaveAnimation = {
+			UIView.animate(withDuration: options.duration,
+			               delay: (options.waiting) ? 0 : options.hold,
+			               options: options.leaveAnimationOptions,
+			               animations: {
+							wrapper.frame.origin = initialPoint
+			}) { (completed) in
+				blurView?.removeFromSuperview()
+				wrapper.removeFromSuperview()
+			}
+		}
 
 		UIView.animate(withDuration: options.duration,
 		               delay: 0,
 		               options: options.enterAnimationOptions,
 		               animations: {
-						wrapper.frame.origin = finalPosition
+						wrapper.frame.origin = finalPoint
 		}) { (completed) in
-			UIView.animate(withDuration: options.duration,
-			               delay: options.hold,
-			               options: options.leaveAnimationOptions,
-			               animations: {
-							wrapper.frame.origin = initialPosition
-			}) { (completed) in
-				wrapper.removeFromSuperview()
+			guard !options.waiting else {
+				return
 			}
+
+			self.leaveAnimation?()
 		}
 	}
 
@@ -68,6 +98,23 @@ open class AnimatorManager {
 		window.windowLevel = UIWindowLevelStatusBar + 1
 		window.addSubview(view)
 		return window
+	}
+
+	private func blur(view: UIView?, with effectStyle: UIBlurEffectStyle?) -> AnimatorBlurView? {
+		guard let container = view,
+			let style = effectStyle else {
+				return nil
+		}
+
+		guard !UIAccessibilityIsReduceTransparencyEnabled() else {
+			return nil
+		}
+
+		let blurEffect = UIBlurEffect(style: style)
+		let blurEffectView = AnimatorBlurView(effect: blurEffect)
+		blurEffectView.frame = container.bounds
+		blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+		return blurEffectView
 	}
 
 	private func getInitialCoordinates(for view: UIView, in containerView: UIView?,  from position: DGPosition) -> CGPoint {

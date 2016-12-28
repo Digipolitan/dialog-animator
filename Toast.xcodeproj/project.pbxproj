@@ -16,6 +16,7 @@
 		AE7769451E13D2440006644C /* Toast.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7769441E13D2440006644C /* Toast.xib */; };
 		AE7769471E13D2A00006644C /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7769461E13D2A00006644C /* Toast.swift */; };
 		AE7769491E13EBF10006644C /* AnimatorOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7769481E13EBF10006644C /* AnimatorOptions.swift */; };
+		AE77694C1E140F6A0006644C /* AnimatorBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77694B1E140F6A0006644C /* AnimatorBlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AE7769441E13D2440006644C /* Toast.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toast.xib; sourceTree = "<group>"; };
 		AE7769461E13D2A00006644C /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		AE7769481E13EBF10006644C /* AnimatorOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorOptions.swift; sourceTree = "<group>"; };
+		AE77694B1E140F6A0006644C /* AnimatorBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorBlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,14 +64,13 @@
 		AE7769261E1274750006644C /* Toast */ = {
 			isa = PBXGroup;
 			children = (
-				AE7769391E1276B80006644C /* App */,
-				AE77693A1E1276DB0006644C /* AnimatorManager.swift */,
-				AE7769481E13EBF10006644C /* AnimatorOptions.swift */,
+				AE77694A1E140F3F0006644C /* Sources */,
+				AE7769391E1276B80006644C /* Sample */,
 			);
 			path = Toast;
 			sourceTree = "<group>";
 		};
-		AE7769391E1276B80006644C /* App */ = {
+		AE7769391E1276B80006644C /* Sample */ = {
 			isa = PBXGroup;
 			children = (
 				AE7769431E13D2390006644C /* Toast */,
@@ -80,7 +81,7 @@
 				AE7769301E1274750006644C /* LaunchScreen.storyboard */,
 				AE7769331E1274750006644C /* Info.plist */,
 			);
-			name = App;
+			name = Sample;
 			sourceTree = "<group>";
 		};
 		AE7769431E13D2390006644C /* Toast */ = {
@@ -90,6 +91,16 @@
 				AE7769461E13D2A00006644C /* Toast.swift */,
 			);
 			name = Toast;
+			sourceTree = "<group>";
+		};
+		AE77694A1E140F3F0006644C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AE77693A1E1276DB0006644C /* AnimatorManager.swift */,
+				AE7769481E13EBF10006644C /* AnimatorOptions.swift */,
+				AE77694B1E140F6A0006644C /* AnimatorBlurView.swift */,
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 				AE7769471E13D2A00006644C /* Toast.swift in Sources */,
 				AE77692A1E1274750006644C /* ViewController.swift in Sources */,
 				AE7769281E1274750006644C /* AppDelegate.swift in Sources */,
+				AE77694C1E140F6A0006644C /* AnimatorBlurView.swift in Sources */,
 				AE7769491E13EBF10006644C /* AnimatorOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
