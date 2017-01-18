@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: import_from_git" time="1.237206">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: import_from_git" time="0.993151">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: import_from_git" time="1.028847">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: import_from_git" time="1.124209">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: prepare_lane_options" time="0.000654">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: Switch to appfile_init lane" time="0.000696">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: prepare_lane_options" time="0.000801">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: user_validation" time="17.590678">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: get_project_info" time="0.00111">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: update_app_identifier" time="0.193193">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: increment_version_number" time="1.811688">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: increment_build_number" time="1.086831">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: get_project_info" time="0.000708">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="13: clean_xcodeproj_configuration" time="0.115713">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="14: clean_xcworkspace_configuration" time="0.015987">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="15: podfile_init" time="0.000794">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="16: git_get_remote_info" time="0.012026">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="17: user_validation" time="3.228982">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="18: get_version_number" time="0.498999">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="19: podspec_init" time="0.000928">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

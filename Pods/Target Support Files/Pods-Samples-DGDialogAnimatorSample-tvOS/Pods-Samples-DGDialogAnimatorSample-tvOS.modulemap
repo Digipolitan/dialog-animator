@@ -1,0 +1,6 @@
+framework module Pods_Samples_DGDialogAnimatorSample_tvOS {
+  umbrella header "Pods-Samples-DGDialogAnimatorSample-tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

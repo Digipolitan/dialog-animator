@@ -1,0 +1,6 @@
+framework module Pods_Samples_DGDialogAnimatorSample_iOS {
+  umbrella header "Pods-Samples-DGDialogAnimatorSample-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

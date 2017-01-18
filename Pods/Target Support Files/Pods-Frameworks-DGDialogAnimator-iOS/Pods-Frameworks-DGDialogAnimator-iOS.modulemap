@@ -1,0 +1,6 @@
+framework module Pods_Frameworks_DGDialogAnimator_iOS {
+  umbrella header "Pods-Frameworks-DGDialogAnimator-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
