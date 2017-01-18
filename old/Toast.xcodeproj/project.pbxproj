@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE7769281E1274750006644C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7769271E1274750006644C /* AppDelegate.swift */; };
+		AE77692A1E1274750006644C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7769291E1274750006644C /* ViewController.swift */; };
+		AE77692D1E1274750006644C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE77692B1E1274750006644C /* Main.storyboard */; };
+		AE77692F1E1274750006644C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE77692E1E1274750006644C /* Assets.xcassets */; };
+		AE7769321E1274750006644C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7769301E1274750006644C /* LaunchScreen.storyboard */; };
+		AE77693B1E1276DB0006644C /* DGToastAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77693A1E1276DB0006644C /* DGToastAnimator.swift */; };
+		AE7769451E13D2440006644C /* Toast.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7769441E13D2440006644C /* Toast.xib */; };
+		AE7769471E13D2A00006644C /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7769461E13D2A00006644C /* Toast.swift */; };
+		AE77694C1E140F6A0006644C /* AnimatorBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77694B1E140F6A0006644C /* AnimatorBlurView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE7769241E1274750006644C /* Toast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7769271E1274750006644C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE7769291E1274750006644C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE77692C1E1274750006644C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE77692E1E1274750006644C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE7769311E1274750006644C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE7769331E1274750006644C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE77693A1E1276DB0006644C /* DGToastAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGToastAnimator.swift; sourceTree = "<group>"; };
+		AE7769441E13D2440006644C /* Toast.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toast.xib; sourceTree = "<group>"; };
+		AE7769461E13D2A00006644C /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		AE77694B1E140F6A0006644C /* AnimatorBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorBlurView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE7769211E1274750006644C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE77691B1E1274750006644C = {
+			isa = PBXGroup;
+			children = (
+				AE7769261E1274750006644C /* Toast */,
+				AE7769251E1274750006644C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE7769251E1274750006644C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE7769241E1274750006644C /* Toast.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE7769261E1274750006644C /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				AE77694A1E140F3F0006644C /* Sources */,
+				AE7769391E1276B80006644C /* Sample */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		AE7769391E1276B80006644C /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				AE7769431E13D2390006644C /* Toast */,
+				AE7769271E1274750006644C /* AppDelegate.swift */,
+				AE7769291E1274750006644C /* ViewController.swift */,
+				AE77692B1E1274750006644C /* Main.storyboard */,
+				AE77692E1E1274750006644C /* Assets.xcassets */,
+				AE7769301E1274750006644C /* LaunchScreen.storyboard */,
+				AE7769331E1274750006644C /* Info.plist */,
+			);
+			name = Sample;
+			sourceTree = "<group>";
+		};
+		AE7769431E13D2390006644C /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				AE7769441E13D2440006644C /* Toast.xib */,
+				AE7769461E13D2A00006644C /* Toast.swift */,
+			);
+			name = Toast;
+			sourceTree = "<group>";
+		};
+		AE77694A1E140F3F0006644C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AE77693A1E1276DB0006644C /* DGToastAnimator.swift */,
+				AE77694B1E140F6A0006644C /* AnimatorBlurView.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE7769231E1274750006644C /* Toast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE7769361E1274750006644C /* Build configuration list for PBXNativeTarget "Toast" */;
+			buildPhases = (
+				AE7769201E1274750006644C /* Sources */,
+				AE7769211E1274750006644C /* Frameworks */,
+				AE7769221E1274750006644C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Toast;
+			productName = Toast;
+			productReference = AE7769241E1274750006644C /* Toast.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE77691C1E1274750006644C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Digipolitan;
+				TargetAttributes = {
+					AE7769231E1274750006644C = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 582762VK3P;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AE77691F1E1274750006644C /* Build configuration list for PBXProject "Toast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE77691B1E1274750006644C;
+			productRefGroup = AE7769251E1274750006644C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE7769231E1274750006644C /* Toast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE7769221E1274750006644C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE7769321E1274750006644C /* LaunchScreen.storyboard in Resources */,
+				AE7769451E13D2440006644C /* Toast.xib in Resources */,
+				AE77692F1E1274750006644C /* Assets.xcassets in Resources */,
+				AE77692D1E1274750006644C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE7769201E1274750006644C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE77693B1E1276DB0006644C /* DGToastAnimator.swift in Sources */,
+				AE7769471E13D2A00006644C /* Toast.swift in Sources */,
+				AE77692A1E1274750006644C /* ViewController.swift in Sources */,
+				AE7769281E1274750006644C /* AppDelegate.swift in Sources */,
+				AE77694C1E140F6A0006644C /* AnimatorBlurView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE77692B1E1274750006644C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE77692C1E1274750006644C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE7769301E1274750006644C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE7769311E1274750006644C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE7769341E1274750006644C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE7769351E1274750006644C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE7769371E1274750006644C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 582762VK3P;
+				INFOPLIST_FILE = Toast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.digipolitan.Toast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AE7769381E1274750006644C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 582762VK3P;
+				INFOPLIST_FILE = Toast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.digipolitan.Toast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE77691F1E1274750006644C /* Build configuration list for PBXProject "Toast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE7769341E1274750006644C /* Debug */,
+				AE7769351E1274750006644C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7769361E1274750006644C /* Build configuration list for PBXNativeTarget "Toast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE7769371E1274750006644C /* Debug */,
+				AE7769381E1274750006644C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE77691C1E1274750006644C /* Project object */;
+}
