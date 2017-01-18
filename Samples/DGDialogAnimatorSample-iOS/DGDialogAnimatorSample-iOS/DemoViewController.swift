@@ -7,29 +7,33 @@
 //
 
 import UIKit
+import DGDialogAnimator
 
 class DemoViewController: UIViewController {
-
+	var toast: Toast!
+	var options: DGDialogAnimator.Options?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		self.toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast
+		self.toast.frame.size = CGSize(width: self.view.bounds.width, height: 100)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
+	@IBAction func didTouchOnShow(_ sender: Any) {
+		let container: UIView? = (self.options?.coverStatusBar ?? false) ? nil : self.view
+		DGDialogAnimator.default.animate(view: self.toast, in: container, with: self.options, from: .top, to: .top)
+	}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	@IBAction func didTouchOnInfo(_ sender: Any){
+		guard let controller = self.navigationController?.viewControllers.first else {
+			return
+		}
 
+		DGDialogAnimator.default.animate(view: controller.view, in: self.view, with: nil, from: .bottom)
+	}
 }

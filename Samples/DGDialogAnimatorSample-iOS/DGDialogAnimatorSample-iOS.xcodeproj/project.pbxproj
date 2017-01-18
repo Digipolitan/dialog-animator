@@ -16,7 +16,8 @@
 		AE667FE51E2FB064007A401B /* Toast.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE667FE31E2FB064007A401B /* Toast.xib */; };
 		AE667FE61E2FB064007A401B /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE667FE41E2FB064007A401B /* Toast.swift */; };
 		AE667FE81E2FB09F007A401B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE667FE71E2FB09F007A401B /* Main.storyboard */; };
-		AE667FEA1E2FB16E007A401B /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE667FE91E2FB16E007A401B /* DemoViewController.swift */; };
+		AE667FEA1E2FB16E007A401B /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE667FE91E2FB16E007A401B /* ConfigurationViewController.swift */; };
+		AE667FEC1E2FC515007A401B /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE667FEB1E2FC515007A401B /* DemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,7 +50,8 @@
 		AE667FE31E2FB064007A401B /* Toast.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toast.xib; sourceTree = "<group>"; };
 		AE667FE41E2FB064007A401B /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		AE667FE71E2FB09F007A401B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		AE667FE91E2FB16E007A401B /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		AE667FE91E2FB16E007A401B /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		AE667FEB1E2FC515007A401B /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,8 @@
 		AE667FE01E2FAF73007A401B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AE667FE91E2FB16E007A401B /* DemoViewController.swift */,
+				AE667FE91E2FB16E007A401B /* ConfigurationViewController.swift */,
+				AE667FEB1E2FC515007A401B /* DemoViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -261,9 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE667FEA1E2FB16E007A401B /* DemoViewController.swift in Sources */,
+				AE667FEA1E2FB16E007A401B /* ConfigurationViewController.swift in Sources */,
 				AE667FE61E2FB064007A401B /* Toast.swift in Sources */,
 				A30D63F21E0D717E00A3CE45 /* AppDelegate.swift in Sources */,
+				AE667FEC1E2FC515007A401B /* DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
