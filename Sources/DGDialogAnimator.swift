@@ -109,7 +109,7 @@ open class DGDialogAnimator {
 
 	public func animate(view: UIView, in container: UIView?, with options: Options, initialPoint: CGPoint, finalPoint: CGPoint) {
 		guard (container  == nil || !options.coverStatusBar) else {
-			fatalError("cannot cover status bar with a container")
+			fatalError("container must be nil when `coverStatusBar` options is enabled")
 		}
 
 		let wrapper = (container == nil && options.coverStatusBar) ? self.wrap(view: view) : view
