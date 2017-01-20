@@ -34,7 +34,7 @@ open class DGDialogAnimator {
 
 		public static let top		= Position(rawValue: 1 << 0)
 		public static let right		= Position(rawValue: 1 << 1)
-		public static let bottom   = Position(rawValue: 1 << 2)
+		public static let bottom	= Position(rawValue: 1 << 2)
 		public static let left		= Position(rawValue: 1 << 3)
 		public static let center	= Position(rawValue: 1 << 4)
 	}
@@ -87,7 +87,14 @@ open class DGDialogAnimator {
 	}
 
 	open static let `default`: DGDialogAnimator = DGDialogAnimator()
-	private init() {}
+	private init() {
+		NotificationCenter.default.removeObserver(self)
+		NotificationCenter.default.addObserver(self, selector: #selector(updateFrameIsAnimating), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+	}
+
+	private weak var currentView: UIView?
+	private weak var currentContainer: UIView?
+	private var currentFinalPosition: Position?
 
 	private var isAnimating: Bool = false
 	private var leaveAnimation: ((Void) -> Void)?
@@ -101,16 +108,23 @@ open class DGDialogAnimator {
 		self.isAnimating = false
 	}
 
+
+	@objc
+	fileprivate func updateFrameIsAnimating() {
+		let origin: CGPoint = self.getFinalCoordinates(for: self.currentView!, in: self.currentContainer, from: self.currentFinalPosition)
+		self.currentView?.frame.origin = origin
+	}
+
 	public func animate(view: UIView, in container: UIView?, with options: Options?, from initial: Position, to final: Position? = nil, completion: ((Void) -> (Void))? = nil) {
 		let initialPoint = self.getInitialCoordinates(for: view, in: container, from: initial)
 		let finalPoint	 = self.getFinalCoordinates(for: view, in: container, from: final)
 		let	animatorOptions = options ?? Options()
 
+		self.currentFinalPosition = final
 		self.animate(view: view, in: container, with: animatorOptions, initialPoint: initialPoint, finalPoint: finalPoint, completion: completion)
 	}
 
 	public func animate(view: UIView, in container: UIView?, with options: Options, initialPoint: CGPoint, finalPoint: CGPoint, completion: ((Void) -> (Void))?) {
-		print("self.isAnimating: \(self.isAnimating)")
 		guard (container  == nil || !options.coverStatusBar) else {
 			fatalError("container must be nil when `coverStatusBar` options is enabled")
 		}
@@ -119,6 +133,8 @@ open class DGDialogAnimator {
 			return
 		}
 
+		self.currentView		= view
+		self.currentContainer	= container
 		self.isAnimating = true
 
 		let wrapper = (container == nil && options.coverStatusBar) ? self.wrap(view: view) : view
@@ -144,6 +160,12 @@ open class DGDialogAnimator {
 
 		container?.addSubview(wrapper)
 		self.leaveAnimation = {
+			if blurView != nil {
+				UIView.animate(withDuration: 0.2, animations: {
+					blurView?.alpha = 0
+				})
+			}
+
 			UIView.animate(withDuration: options.duration,
 			               delay: (options.waiting) ? 0 : options.hold,
 			               options: options.leaveAnimationOptions,
