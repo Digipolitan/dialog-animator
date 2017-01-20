@@ -26,6 +26,8 @@
 		AE9B55C11E321A8500BE9DB2 /* YesNoAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9B55BF1E321A8500BE9DB2 /* YesNoAlertController.xib */; };
 		AE9B55C41E321C9A00BE9DB2 /* InputAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9B55C21E321C9A00BE9DB2 /* InputAlertController.swift */; };
 		AE9B55C51E321C9A00BE9DB2 /* InputAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9B55C31E321C9A00BE9DB2 /* InputAlertController.xib */; };
+		AE9B55C91E324EDC00BE9DB2 /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9B55C71E324EDC00BE9DB2 /* ModalController.swift */; };
+		AE9B55CA1E324EDC00BE9DB2 /* ModalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9B55C81E324EDC00BE9DB2 /* ModalController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +70,8 @@
 		AE9B55BF1E321A8500BE9DB2 /* YesNoAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YesNoAlertController.xib; sourceTree = "<group>"; };
 		AE9B55C21E321C9A00BE9DB2 /* InputAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputAlertController.swift; sourceTree = "<group>"; };
 		AE9B55C31E321C9A00BE9DB2 /* InputAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputAlertController.xib; sourceTree = "<group>"; };
+		AE9B55C71E324EDC00BE9DB2 /* ModalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
+		AE9B55C81E324EDC00BE9DB2 /* ModalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		AE667FE11E2FAF78007A401B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AE9B55C61E324C4B00BE9DB2 /* Modals */,
 				AE9B55BD1E32137100BE9DB2 /* Alerts */,
 				AE9B55BC1E32136C00BE9DB2 /* Toasts */,
 			);
@@ -165,6 +170,15 @@
 				AE9B55C31E321C9A00BE9DB2 /* InputAlertController.xib */,
 			);
 			name = Alerts;
+			sourceTree = "<group>";
+		};
+		AE9B55C61E324C4B00BE9DB2 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				AE9B55C71E324EDC00BE9DB2 /* ModalController.swift */,
+				AE9B55C81E324EDC00BE9DB2 /* ModalController.xib */,
+			);
+			name = Modals;
 			sourceTree = "<group>";
 		};
 		B8FF5AA30A09A2E69BAC9EB0 /* Pods */ = {
@@ -247,6 +261,7 @@
 				A30D63FC1E0D717E00A3CE45 /* LaunchScreen.storyboard in Resources */,
 				AE667FE51E2FB064007A401B /* Toast.xib in Resources */,
 				AE9B55C51E321C9A00BE9DB2 /* InputAlertController.xib in Resources */,
+				AE9B55CA1E324EDC00BE9DB2 /* ModalController.xib in Resources */,
 				A30D63F91E0D717E00A3CE45 /* Assets.xcassets in Resources */,
 				AE667FE81E2FB09F007A401B /* Main.storyboard in Resources */,
 			);
@@ -314,6 +329,7 @@
 				AE9B55C41E321C9A00BE9DB2 /* InputAlertController.swift in Sources */,
 				A30D63F21E0D717E00A3CE45 /* AppDelegate.swift in Sources */,
 				AE487EB21E30F39000566EF3 /* PositionViewController.swift in Sources */,
+				AE9B55C91E324EDC00BE9DB2 /* ModalController.swift in Sources */,
 				AE667FEC1E2FC515007A401B /* DemoViewController.swift in Sources */,
 				AE9B55C01E321A8500BE9DB2 /* YesNoAlertController.swift in Sources */,
 			);

@@ -9,20 +9,37 @@
 import UIKit
 import DGDialogAnimator
 
-class ControlCenterTableViewController: UITableViewController {
+class ControlCenterViewController: UIViewController {
+	@IBOutlet weak var tableView: UITableView!
+
 	var actions: [IndexPath: (Void) -> (Void)] = [:]
 	var confirmAlertController = ConfirmAlertController()
 	var yesNoAlertController = YesNoAlertController()
 	var intputAlertController = InputAlertController()
+	var modalController = ModalController()
+
+	let entries: [Int: [String]] = [
+		0: [
+			"Success",
+			"Error",
+			"Info",
+			"Warning",
+			"Custom"
+		],
+		1 : [ "Confirm", "Yes/No", "Input"],
+		2 : [ "Light"]
+	]
+
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-
+		self.tableView.delegate = self
+		self.tableView.dataSource = self
 
 		var options = DGDialogAnimator.Options(coverStatusBar: false, hold: 5, duration: 0.3, options: .curveEaseIn)
 		options.backDrop = true
 		options.blurEffect = nil
+
 
 		self.actions = [
 			IndexPath(row: 0, section: 0): { _ in
@@ -56,6 +73,7 @@ class ControlCenterTableViewController: UITableViewController {
 			},
 			IndexPath(row: 2, section: 0): { _ in
 				options.waiting = false
+
 				guard let toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast else {
 					return
 				}
@@ -70,6 +88,7 @@ class ControlCenterTableViewController: UITableViewController {
 			},
 			IndexPath(row: 3, section: 0): { _ in
 				options.waiting = false
+
 				guard let toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast else {
 					return
 				}
@@ -84,6 +103,8 @@ class ControlCenterTableViewController: UITableViewController {
 			},
 			IndexPath(row: 0, section: 1): { _ in
 				options.waiting = true
+				options.blurEffect = nil
+
 				self.tableView.isScrollEnabled = false
 				self.confirmAlertController.view.frame.size = CGSize(width: self.view.bounds.width - 50, height: 200)
 				DGDialogAnimator.default.animate(view: self.confirmAlertController.view, in: self.view, with: options, from: .bottom) {
@@ -92,6 +113,8 @@ class ControlCenterTableViewController: UITableViewController {
 			},
 			IndexPath(row: 1, section: 1): { _ in
 				options.waiting = true
+				options.blurEffect = nil
+
 				self.tableView.isScrollEnabled = false
 				self.yesNoAlertController.view.frame.size = CGSize(width: self.view.bounds.width - 50, height: 200)
 				DGDialogAnimator.default.animate(view: self.yesNoAlertController.view, in: self.view, with: options, from: .bottom) {
@@ -100,9 +123,24 @@ class ControlCenterTableViewController: UITableViewController {
 			},
 			IndexPath(row: 2, section: 1): { _ in
 				options.waiting = true
+				options.blurEffect = nil
+
 				self.tableView.isScrollEnabled = false
 				self.intputAlertController.view.frame.size = CGSize(width: self.view.bounds.width - 50, height: 200)
 				DGDialogAnimator.default.animate(view: self.intputAlertController.view, in: self.view, with: options, from: .bottom) {
+					self.tableView.isScrollEnabled = true
+				}
+			},
+			IndexPath(row: 0, section: 2): { _ in
+				options.waiting = true
+				options.backDrop = true
+				options.blurEffect = .dark
+				options.blurIntensity = 1
+
+				self.tableView.isScrollEnabled = false
+				self.modalController.view.frame.size = CGSize(width: self.view.bounds.width - 20, height: 450)
+				self.modalController.view.layer.cornerRadius = 5
+				DGDialogAnimator.default.animate(view: self.modalController.view, in: self.view, with: options, from: .bottom, to: .bottom) {
 					self.tableView.isScrollEnabled = true
 				}
 			}
@@ -113,13 +151,50 @@ class ControlCenterTableViewController: UITableViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+}
 
-	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+
+extension ControlCenterViewController: UITableViewDelegate, UITableViewDataSource {
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return self.entries.count
+	}
+
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return self.entries[section]!.count
+	}
+
+	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		if section == 0 {
+			return "Toasts"
+		}
+		if section == 1 {
+			return "Alerts"
+		}
+
+		return "Modals"
+	}
+
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier")!
+
+		if (indexPath.section == 0 && indexPath.row == 4) {
+			cell.accessoryType = .disclosureIndicator
+		}
+
+		cell.textLabel?.text = self.entries[indexPath.section]?[indexPath.row]
+		return cell
+	}
+
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if (indexPath.section == 0 && indexPath.row == 4) {
+			self.performSegue(withIdentifier: "configuration", sender: nil)
+		}
+
 		guard let action = self.actions[indexPath] else {
 			return
 		}
 		
 		action()
 	}
-	
 }

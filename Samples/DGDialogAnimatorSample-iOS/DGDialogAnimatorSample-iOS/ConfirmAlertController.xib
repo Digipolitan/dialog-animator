@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmAlertController" customModule="DGDialogAnimatorSample_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="btnConfirm" destination="e4t-Vk-Kl7" id="PbB-Qf-5RD"/>
                 <outlet property="view" destination="9An-6s-ydP" id="rTr-rO-Bvs"/>
             </connections>
         </placeholder>
@@ -28,7 +29,7 @@
                     <color key="textColor" red="0.196931671" green="0.196931671" blue="0.196931671" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r1P-pz-ISH">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r1P-pz-ISH">
                     <rect key="frame" x="10" y="45" width="302" height="209"/>
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     <string key="text">Alert Content
@@ -36,7 +37,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4t-Vk-Kl7">
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4t-Vk-Kl7">
                     <rect key="frame" x="0.0" y="254" width="322" height="65"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="wlw-iq-kui"/>
