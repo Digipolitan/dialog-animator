@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputAlertController" customModule="DGDialogAnimatorSample_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="eQ5-z2-8Hu" id="bCj-u7-4fi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="eQ5-z2-8Hu">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ1-Ob-7Am">
+                    <rect key="frame" x="10" y="10" width="302" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="d07-x5-Rci"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="0.196931671" green="0.196931671" blue="0.196931671" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8j6-E4-it0">
+                    <rect key="frame" x="0.0" y="107" width="161" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="GoN-ML-mmL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="lda-1p-JJa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jF7-g8-b0g">
+                    <rect key="frame" x="161" y="107" width="161" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="5FA-V4-IFL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="Validate"/>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="7o3-Ru-ykK"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eyv-ql-UDn">
+                    <rect key="frame" x="20" y="71" width="282" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pZ1-Ob-7Am" firstAttribute="top" secondItem="eQ5-z2-8Hu" secondAttribute="top" constant="10" id="1RL-tE-NBp"/>
+                <constraint firstAttribute="trailing" secondItem="eyv-ql-UDn" secondAttribute="trailing" constant="20" id="5Le-1I-yrz"/>
+                <constraint firstItem="eyv-ql-UDn" firstAttribute="centerY" secondItem="eQ5-z2-8Hu" secondAttribute="centerY" id="5we-47-i5D"/>
+                <constraint firstItem="8j6-E4-it0" firstAttribute="leading" secondItem="eQ5-z2-8Hu" secondAttribute="leading" id="AgA-6C-Yil"/>
+                <constraint firstItem="jF7-g8-b0g" firstAttribute="top" secondItem="8j6-E4-it0" secondAttribute="top" id="C3m-Qz-jIV"/>
+                <constraint firstItem="eyv-ql-UDn" firstAttribute="leading" secondItem="eQ5-z2-8Hu" secondAttribute="leading" constant="20" id="CBk-HS-hwq"/>
+                <constraint firstItem="jF7-g8-b0g" firstAttribute="width" secondItem="8j6-E4-it0" secondAttribute="width" id="JVo-LE-fYw"/>
+                <constraint firstItem="8j6-E4-it0" firstAttribute="width" secondItem="eQ5-z2-8Hu" secondAttribute="width" multiplier="0.5" id="PL8-Vl-Z3v"/>
+                <constraint firstItem="eyv-ql-UDn" firstAttribute="centerX" secondItem="eQ5-z2-8Hu" secondAttribute="centerX" id="Qon-cm-jPt"/>
+                <constraint firstAttribute="bottom" secondItem="jF7-g8-b0g" secondAttribute="bottom" id="Rz7-Ik-S5z"/>
+                <constraint firstItem="pZ1-Ob-7Am" firstAttribute="leading" secondItem="eQ5-z2-8Hu" secondAttribute="leading" constant="10" id="ad1-dq-6c0"/>
+                <constraint firstAttribute="trailing" secondItem="pZ1-Ob-7Am" secondAttribute="trailing" constant="10" id="ePf-an-Zul"/>
+                <constraint firstAttribute="bottom" secondItem="8j6-E4-it0" secondAttribute="bottom" id="jzL-4O-5mV"/>
+                <constraint firstAttribute="trailing" secondItem="jF7-g8-b0g" secondAttribute="trailing" id="r32-UG-OAg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-744" y="-685"/>
+        </view>
+    </objects>
+</document>

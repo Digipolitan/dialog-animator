@@ -13,11 +13,19 @@
 		A30D63FC1E0D717E00A3CE45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30D63FA1E0D717E00A3CE45 /* LaunchScreen.storyboard */; };
 		A30D640A1E0D71CB00A3CE45 /* DGDialogAnimator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30D64091E0D71CB00A3CE45 /* DGDialogAnimator.framework */; };
 		A30D640B1E0D71CB00A3CE45 /* DGDialogAnimator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A30D64091E0D71CB00A3CE45 /* DGDialogAnimator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE487EB21E30F39000566EF3 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE487EB11E30F39000566EF3 /* PositionViewController.swift */; };
+		AE487EB81E3116E300566EF3 /* ControlCenterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE487EB71E3116E300566EF3 /* ControlCenterTableViewController.swift */; };
 		AE667FE51E2FB064007A401B /* Toast.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE667FE31E2FB064007A401B /* Toast.xib */; };
 		AE667FE61E2FB064007A401B /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE667FE41E2FB064007A401B /* Toast.swift */; };
 		AE667FE81E2FB09F007A401B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE667FE71E2FB09F007A401B /* Main.storyboard */; };
 		AE667FEA1E2FB16E007A401B /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE667FE91E2FB16E007A401B /* ConfigurationViewController.swift */; };
 		AE667FEC1E2FC515007A401B /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE667FEB1E2FC515007A401B /* DemoViewController.swift */; };
+		AE9B55BA1E31FF9700BE9DB2 /* ConfirmAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9B55B81E31FF9700BE9DB2 /* ConfirmAlertController.swift */; };
+		AE9B55BB1E31FF9700BE9DB2 /* ConfirmAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9B55B91E31FF9700BE9DB2 /* ConfirmAlertController.xib */; };
+		AE9B55C01E321A8500BE9DB2 /* YesNoAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9B55BE1E321A8500BE9DB2 /* YesNoAlertController.swift */; };
+		AE9B55C11E321A8500BE9DB2 /* YesNoAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9B55BF1E321A8500BE9DB2 /* YesNoAlertController.xib */; };
+		AE9B55C41E321C9A00BE9DB2 /* InputAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9B55C21E321C9A00BE9DB2 /* InputAlertController.swift */; };
+		AE9B55C51E321C9A00BE9DB2 /* InputAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9B55C31E321C9A00BE9DB2 /* InputAlertController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,11 +55,19 @@
 		A30D63FB1E0D717E00A3CE45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A30D63FD1E0D717E00A3CE45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30D64091E0D71CB00A3CE45 /* DGDialogAnimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DGDialogAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE487EB11E30F39000566EF3 /* PositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
+		AE487EB71E3116E300566EF3 /* ControlCenterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlCenterTableViewController.swift; sourceTree = "<group>"; };
 		AE667FE31E2FB064007A401B /* Toast.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toast.xib; sourceTree = "<group>"; };
 		AE667FE41E2FB064007A401B /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		AE667FE71E2FB09F007A401B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AE667FE91E2FB16E007A401B /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		AE667FEB1E2FC515007A401B /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		AE9B55B81E31FF9700BE9DB2 /* ConfirmAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmAlertController.swift; sourceTree = "<group>"; };
+		AE9B55B91E31FF9700BE9DB2 /* ConfirmAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmAlertController.xib; sourceTree = "<group>"; };
+		AE9B55BE1E321A8500BE9DB2 /* YesNoAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesNoAlertController.swift; sourceTree = "<group>"; };
+		AE9B55BF1E321A8500BE9DB2 /* YesNoAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YesNoAlertController.xib; sourceTree = "<group>"; };
+		AE9B55C21E321C9A00BE9DB2 /* InputAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputAlertController.swift; sourceTree = "<group>"; };
+		AE9B55C31E321C9A00BE9DB2 /* InputAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputAlertController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +128,10 @@
 		AE667FE01E2FAF73007A401B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AE487EB71E3116E300566EF3 /* ControlCenterTableViewController.swift */,
 				AE667FE91E2FB16E007A401B /* ConfigurationViewController.swift */,
 				AE667FEB1E2FC515007A401B /* DemoViewController.swift */,
+				AE487EB11E30F39000566EF3 /* PositionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -121,10 +139,32 @@
 		AE667FE11E2FAF78007A401B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AE9B55BD1E32137100BE9DB2 /* Alerts */,
+				AE9B55BC1E32136C00BE9DB2 /* Toasts */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		AE9B55BC1E32136C00BE9DB2 /* Toasts */ = {
+			isa = PBXGroup;
+			children = (
 				AE667FE31E2FB064007A401B /* Toast.xib */,
 				AE667FE41E2FB064007A401B /* Toast.swift */,
 			);
-			name = Components;
+			name = Toasts;
+			sourceTree = "<group>";
+		};
+		AE9B55BD1E32137100BE9DB2 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				AE9B55B81E31FF9700BE9DB2 /* ConfirmAlertController.swift */,
+				AE9B55B91E31FF9700BE9DB2 /* ConfirmAlertController.xib */,
+				AE9B55BE1E321A8500BE9DB2 /* YesNoAlertController.swift */,
+				AE9B55BF1E321A8500BE9DB2 /* YesNoAlertController.xib */,
+				AE9B55C21E321C9A00BE9DB2 /* InputAlertController.swift */,
+				AE9B55C31E321C9A00BE9DB2 /* InputAlertController.xib */,
+			);
+			name = Alerts;
 			sourceTree = "<group>";
 		};
 		B8FF5AA30A09A2E69BAC9EB0 /* Pods */ = {
@@ -202,8 +242,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9B55BB1E31FF9700BE9DB2 /* ConfirmAlertController.xib in Resources */,
+				AE9B55C11E321A8500BE9DB2 /* YesNoAlertController.xib in Resources */,
 				A30D63FC1E0D717E00A3CE45 /* LaunchScreen.storyboard in Resources */,
 				AE667FE51E2FB064007A401B /* Toast.xib in Resources */,
+				AE9B55C51E321C9A00BE9DB2 /* InputAlertController.xib in Resources */,
 				A30D63F91E0D717E00A3CE45 /* Assets.xcassets in Resources */,
 				AE667FE81E2FB09F007A401B /* Main.storyboard in Resources */,
 			);
@@ -264,10 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9B55BA1E31FF9700BE9DB2 /* ConfirmAlertController.swift in Sources */,
 				AE667FEA1E2FB16E007A401B /* ConfigurationViewController.swift in Sources */,
 				AE667FE61E2FB064007A401B /* Toast.swift in Sources */,
+				AE487EB81E3116E300566EF3 /* ControlCenterTableViewController.swift in Sources */,
+				AE9B55C41E321C9A00BE9DB2 /* InputAlertController.swift in Sources */,
 				A30D63F21E0D717E00A3CE45 /* AppDelegate.swift in Sources */,
+				AE487EB21E30F39000566EF3 /* PositionViewController.swift in Sources */,
 				AE667FEC1E2FC515007A401B /* DemoViewController.swift in Sources */,
+				AE9B55C01E321A8500BE9DB2 /* YesNoAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

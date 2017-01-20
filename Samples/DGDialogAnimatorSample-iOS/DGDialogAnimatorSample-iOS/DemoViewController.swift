@@ -12,11 +12,13 @@ import DGDialogAnimator
 class DemoViewController: UIViewController {
 	var toast: Toast!
 	var options: DGDialogAnimator.Options?
-	
+	var from: DGDialogAnimator.Position?
+	var to: DGDialogAnimator.Position?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast
-		self.toast.frame.size = CGSize(width: self.view.bounds.width, height: 100)
+		self.toast.frame.size = CGSize(width: self.view.bounds.width, height: 80)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,16 +26,9 @@ class DemoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-	@IBAction func didTouchOnShow(_ sender: Any) {
+	@IBAction func didTouchShow(_ sender: Any) {
+		print("self.options: \(self.options)")
 		let container: UIView? = (self.options?.coverStatusBar ?? false) ? nil : self.view
-		DGDialogAnimator.default.animate(view: self.toast, in: container, with: self.options, from: .top, to: .top)
-	}
-
-	@IBAction func didTouchOnInfo(_ sender: Any){
-		guard let controller = self.navigationController?.viewControllers.first else {
-			return
-		}
-
-		DGDialogAnimator.default.animate(view: controller.view, in: self.view, with: nil, from: .bottom)
+		DGDialogAnimator.default.animate(view: self.toast, in: container, with: self.options, from: self.from!, to: self.to!)
 	}
 }

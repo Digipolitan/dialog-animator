@@ -27,7 +27,7 @@ class ConfigurationViewController: UIViewController {
 		options.blurEffect = .dark
 		options.blurIntensity = 1.0
 		options.coverStatusBar = false
-
+		
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +50,10 @@ class ConfigurationViewController: UIViewController {
 		else {
 			self.blurIntensitySlider.isEnabled = true
 		}
+	}
+
+	@IBAction func didChangeBlurIntensity(_ sender: Any) {
+		self.options.blurIntensity = CGFloat(self.blurIntensitySlider.value)
 	}
 
 	@IBAction func didChangeCoverStatusBar(_ sender: Any) {
@@ -77,7 +81,7 @@ class ConfigurationViewController: UIViewController {
 	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		guard let controller: DemoViewController = segue.destination as? DemoViewController else {
+		guard let controller: PositionViewController = segue.destination as? PositionViewController else {
 			return
 		}
 
