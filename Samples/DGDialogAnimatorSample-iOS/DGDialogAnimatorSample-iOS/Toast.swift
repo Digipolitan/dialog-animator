@@ -10,7 +10,6 @@ import UIKit
 import DGDialogAnimator
 
 class Toast: UIView {
-
 	@IBOutlet weak var label: UILabel!
 
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

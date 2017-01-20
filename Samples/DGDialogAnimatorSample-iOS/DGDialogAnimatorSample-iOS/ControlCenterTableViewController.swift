@@ -37,13 +37,15 @@ class ControlCenterViewController: UIViewController {
 		self.tableView.dataSource = self
 
 		var options = DGDialogAnimator.Options(coverStatusBar: false, hold: 5, duration: 0.3, options: .curveEaseIn)
-		options.backDrop = true
-		options.blurEffect = nil
 
 
 		self.actions = [
 			IndexPath(row: 0, section: 0): { _ in
 				options.waiting = false
+				options.hold = 5
+				options.backDrop = false
+				options.blurEffect = nil
+
 				guard let toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast else {
 					return
 				}
@@ -59,6 +61,9 @@ class ControlCenterViewController: UIViewController {
 			},
 			IndexPath(row: 1, section: 0): { _ in
 				options.waiting = false
+				options.backDrop = false
+				options.blurEffect = nil
+
 				guard let toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast else {
 					return
 				}
@@ -73,6 +78,8 @@ class ControlCenterViewController: UIViewController {
 			},
 			IndexPath(row: 2, section: 0): { _ in
 				options.waiting = false
+				options.backDrop = false
+				options.blurEffect = nil
 
 				guard let toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast else {
 					return
@@ -88,6 +95,9 @@ class ControlCenterViewController: UIViewController {
 			},
 			IndexPath(row: 3, section: 0): { _ in
 				options.waiting = false
+				options.backDrop = false
+				options.blurEffect = nil
+
 
 				guard let toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast else {
 					return

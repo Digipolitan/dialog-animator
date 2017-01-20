@@ -13,10 +13,11 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Toast" customModule="DGDialogAnimatorSample_iOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="wja-uz-Svj">
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="wja-uz-Svj">
                     <rect key="frame" x="10" y="5" width="360" height="94"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" red="0.196931671" green="0.196931671" blue="0.196931671" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
@@ -33,7 +34,7 @@
             <connections>
                 <outlet property="label" destination="wja-uz-Svj" id="7nh-fX-X7n"/>
             </connections>
-            <point key="canvasLocation" x="57" y="86"/>
+            <point key="canvasLocation" x="-298" y="-8"/>
         </view>
     </objects>
 </document>

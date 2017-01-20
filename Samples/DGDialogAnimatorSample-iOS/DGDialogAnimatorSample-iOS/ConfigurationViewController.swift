@@ -17,6 +17,8 @@ class ConfigurationViewController: UIViewController {
 	@IBOutlet weak var animationDurationSlider: UISlider!
 	@IBOutlet weak var holdDurationSlider: UISlider!
 	@IBOutlet weak var waitingSegment: UISegmentedControl!
+	@IBOutlet weak var lblDuration: UILabel!
+	@IBOutlet weak var lblHold: UILabel!
 
 	var blurEffects: [UIBlurEffectStyle?] = [.light, .dark, .extraLight, nil]
 	var options = DGDialogAnimator.Options()
@@ -27,7 +29,8 @@ class ConfigurationViewController: UIViewController {
 		options.blurEffect = .dark
 		options.blurIntensity = 1.0
 		options.coverStatusBar = false
-		
+		self.lblDuration.text = "\(self.options.hold)"
+		self.lblHold.text = "\(self.options.duration)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,10 +65,12 @@ class ConfigurationViewController: UIViewController {
 
 	@IBAction func didChangeAnimationDuration(_ sender: Any) {
 		self.options.duration = Double(self.animationDurationSlider.value)
+		self.lblDuration.text = String(format: "%.2f", self.options.duration)
 	}
 
 	@IBAction func didChangeHoldDuration(_ sender: Any) {
 		self.options.hold = Double(self.holdDurationSlider.value)
+		self.lblHold.text = String(format: "%.2f", self.options.hold)
 	}
 
 	@IBAction func didChangeIsWaiting(_ sender: Any) {

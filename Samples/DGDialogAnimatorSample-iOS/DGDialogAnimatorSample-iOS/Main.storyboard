@@ -305,6 +305,8 @@
                         <outlet property="blurIntensitySlider" destination="itX-Sc-VN4" id="qmu-pd-XQq"/>
                         <outlet property="coverStatusBarSegment" destination="1PT-9e-XRy" id="kEP-Ne-z6h"/>
                         <outlet property="holdDurationSlider" destination="xgU-Bc-aYS" id="xsT-SE-lD5"/>
+                        <outlet property="lblDuration" destination="XVn-LT-5Eb" id="3Pu-4B-kRa"/>
+                        <outlet property="lblHold" destination="Mg6-lN-1pn" id="tuh-cI-20y"/>
                         <outlet property="waitingSegment" destination="dOA-Xt-SbE" id="RE7-A0-Yvz"/>
                     </connections>
                 </viewController>
@@ -320,7 +322,7 @@
                         <viewControllerLayoutGuide type="top" id="uTo-lW-FNJ"/>
                         <viewControllerLayoutGuide type="bottom" id="5Jf-Em-JOT"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LJ8-dX-KXC">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="LJ8-dX-KXC">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -332,11 +334,11 @@
                                         <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AaV-8T-pOn" id="Jyu-1y-ogt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ogx-0y-scw">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>

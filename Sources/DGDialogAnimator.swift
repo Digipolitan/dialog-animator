@@ -94,24 +94,25 @@ open class DGDialogAnimator {
 
 	private weak var currentView: UIView?
 	private weak var currentContainer: UIView?
-	private var currentFinalPosition: Position?
+	private var currentPosition: Position?
 
+	private var isLeaving: Bool = false
 	private var isAnimating: Bool = false
-	private var leaveAnimation: ((Void) -> Void)?
+	private var leaveAnimation: ((_ deadline: DispatchTime?) -> Void)?
 
 	public func dismiss() {
 		guard let dismiss = self.leaveAnimation else {
 			return
 		}
 
-		dismiss()
+		dismiss(.now())
 		self.isAnimating = false
 	}
 
 
 	@objc
 	fileprivate func updateFrameIsAnimating() {
-		let origin: CGPoint = self.getFinalCoordinates(for: self.currentView!, in: self.currentContainer, from: self.currentFinalPosition)
+		let origin: CGPoint = self.getFinalCoordinates(for: self.currentView!, in: self.currentContainer, from: self.currentPosition)
 		self.currentView?.frame.origin = origin
 	}
 
@@ -120,7 +121,7 @@ open class DGDialogAnimator {
 		let finalPoint	 = self.getFinalCoordinates(for: view, in: container, from: final)
 		let	animatorOptions = options ?? Options()
 
-		self.currentFinalPosition = final
+		self.currentPosition = final
 		self.animate(view: view, in: container, with: animatorOptions, initialPoint: initialPoint, finalPoint: finalPoint, completion: completion)
 	}
 
@@ -135,7 +136,7 @@ open class DGDialogAnimator {
 
 		self.currentView		= view
 		self.currentContainer	= container
-		self.isAnimating = true
+		self.isAnimating		= true
 
 		let wrapper = (container == nil && options.coverStatusBar) ? self.wrap(view: view) : view
 		wrapper.frame.origin = initialPoint
@@ -159,24 +160,35 @@ open class DGDialogAnimator {
 		}
 
 		container?.addSubview(wrapper)
-		self.leaveAnimation = {
-			if blurView != nil {
-				UIView.animate(withDuration: 0.2, animations: {
-					blurView?.alpha = 0
-				})
-			}
+		self.leaveAnimation = { (dispatchTime) in
+			let deadline = (dispatchTime == nil) ? .now() + (options.waiting ? 0 : options.hold) : dispatchTime!
 
-			UIView.animate(withDuration: options.duration,
-			               delay: (options.waiting) ? 0 : options.hold,
-			               options: options.leaveAnimationOptions,
-			               animations: {
-							wrapper.frame.origin = initialPoint
-			}) { (completed) in
-				blurView?.removeFromSuperview()
-				wrapper.removeFromSuperview()
-				self.isAnimating = false
-				completion?()
-			}
+			DispatchQueue.main.asyncAfter(deadline: deadline, execute: {
+				guard !self.isLeaving else {
+					return
+				}
+
+				self.isLeaving = true
+
+				if blurView != nil {
+					UIView.animate(withDuration: 0.2, animations: {
+						blurView?.alpha = 0
+					})
+				}
+
+				UIView.animate(withDuration: options.duration,
+				               delay: 0,
+				               options: [options.leaveAnimationOptions, .allowUserInteraction],
+				               animations: {
+								wrapper.frame.origin = initialPoint
+				}) { (completed) in
+					blurView?.removeFromSuperview()
+					wrapper.removeFromSuperview()
+					self.isAnimating = false
+					self.isLeaving = false
+					completion?()
+				}
+			})
 		}
 
 		UIView.animate(withDuration: options.duration,
@@ -188,8 +200,9 @@ open class DGDialogAnimator {
 			guard !options.waiting else {
 				return
 			}
-			self.leaveAnimation?()
+			self.leaveAnimation?(nil)
 		}
+
 	}
 
 	private func wrap(view: UIView) -> UIWindow{

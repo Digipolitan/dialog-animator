@@ -17,10 +17,10 @@ class PositionViewController: UIViewController {
 
 	var position: DGDialogAnimator.Position {
 		get {
-			return title == "initial" ? self.initialPosition : self.finalPosition
+			return title == "Initial Position" ? self.initialPosition : self.finalPosition
 		}
 		set {
-			if self.title == "initial" {
+			if self.title == "Initial Position" {
 				self.initialPosition = newValue
 			}
 			else {
