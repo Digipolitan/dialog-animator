@@ -89,6 +89,7 @@ open class DGDialogAnimator {
 	open static let `default`: DGDialogAnimator = DGDialogAnimator()
 	private init() {}
 
+	private var isAnimating: Bool = false
 	private var leaveAnimation: ((Void) -> Void)?
 
 	public func dismiss() {
@@ -97,20 +98,28 @@ open class DGDialogAnimator {
 		}
 
 		dismiss()
+		self.isAnimating = false
 	}
 
-	public func animate(view: UIView, in container: UIView?, with options: Options?, from initial: Position, to final: Position? = nil) {
+	public func animate(view: UIView, in container: UIView?, with options: Options?, from initial: Position, to final: Position? = nil, completion: ((Void) -> (Void))? = nil) {
 		let initialPoint = self.getInitialCoordinates(for: view, in: container, from: initial)
 		let finalPoint	 = self.getFinalCoordinates(for: view, in: container, from: final)
 		let	animatorOptions = options ?? Options()
 
-		self.animate(view: view, in: container, with: animatorOptions, initialPoint: initialPoint, finalPoint: finalPoint)
+		self.animate(view: view, in: container, with: animatorOptions, initialPoint: initialPoint, finalPoint: finalPoint, completion: completion)
 	}
 
-	public func animate(view: UIView, in container: UIView?, with options: Options, initialPoint: CGPoint, finalPoint: CGPoint) {
+	public func animate(view: UIView, in container: UIView?, with options: Options, initialPoint: CGPoint, finalPoint: CGPoint, completion: ((Void) -> (Void))?) {
+		print("self.isAnimating: \(self.isAnimating)")
 		guard (container  == nil || !options.coverStatusBar) else {
 			fatalError("container must be nil when `coverStatusBar` options is enabled")
 		}
+
+		guard !self.isAnimating else {
+			return
+		}
+
+		self.isAnimating = true
 
 		let wrapper = (container == nil && options.coverStatusBar) ? self.wrap(view: view) : view
 		wrapper.frame.origin = initialPoint
@@ -143,6 +152,8 @@ open class DGDialogAnimator {
 			}) { (completed) in
 				blurView?.removeFromSuperview()
 				wrapper.removeFromSuperview()
+				self.isAnimating = false
+				completion?()
 			}
 		}
 
@@ -155,7 +166,6 @@ open class DGDialogAnimator {
 			guard !options.waiting else {
 				return
 			}
-
 			self.leaveAnimation?()
 		}
 	}
