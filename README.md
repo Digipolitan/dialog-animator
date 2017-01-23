@@ -7,6 +7,10 @@ DGDialogAnimator
 [![Platform](https://img.shields.io/cocoapods/p/DGDialogAnimator.svg?style=flat)](http://cocoadocs.org/docsets/DGDialogAnimator.svg)
 [![Twitter](https://img.shields.io/badge/twitter-@Digipolitan-blue.svg?style=flat)](http://twitter.com/Digipolitan)
 
+`DGDialogAnimator` is a manager allowing you to quickly display **Dialogs** like **Toasts**, **Alerts** or even **Modal Form**, with only few lines of codes thanks to predefined `OptionSet`.
+
+![Capture](https://github.com/Digipolitan/dialog-animator-swift/blob/develop/Screenshots/capture.gif?raw=true "Capture")
+
 
 ## Getting Started
 
