@@ -43,12 +43,15 @@ end
 
 ## Usage
 
-- Select the view to animate, select the container, where the view will start the animation, where it will go.
+- Select the view to animate, its container, where the animation will start and where it will go.
 
 ```swift
 
-let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))    
+let toast = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds/2, height: 100))    
 DGDialogAnimator.default.animate(view: toast, in: self.view, with: nil, from: .top, to: .top)
+
+let notification = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds, height: 250))    
+DGDialogAnimator.default.animate(view: notification, in: self.view, with: nil, from: [.top, .left], to: [.top, .right])
 ```
 
 ### Configuration
