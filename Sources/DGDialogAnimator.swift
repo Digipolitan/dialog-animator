@@ -94,7 +94,12 @@ open class DGDialogAnimator {
 
 	private weak var currentView: UIView?
 	private weak var currentContainer: UIView?
-	private var currentPosition: Position?
+
+	private var initialPosition: Position?
+	private var initialCoordinates: CGPoint?
+
+	private var finalPosition: Position?
+	private var finalCoordinates: CGPoint?
 
 	private var isLeaving: Bool = false
 	private var isAnimating: Bool = false
@@ -112,17 +117,30 @@ open class DGDialogAnimator {
 
 	@objc
 	fileprivate func updateFrameIsAnimating() {
-		let origin: CGPoint = self.getFinalCoordinates(for: self.currentView!, in: self.currentContainer, from: self.currentPosition)
-		self.currentView?.frame.origin = origin
+		self.finalCoordinates = self.getFinalCoordinates(for: self.currentView!, in: self.currentContainer, from: self.finalPosition)
+		self.initialCoordinates = self.getInitialCoordinates(for: self.currentView!, in: self.currentContainer, from: self.initialPosition)
+
+		if let origin = self.finalCoordinates {
+			self.currentView?.frame.origin = origin
+		}
 	}
 
 	public func animate(view: UIView, in container: UIView?, with options: Options?, from initial: Position, to final: Position? = nil, completion: ((Void) -> (Void))? = nil) {
-		let initialPoint = self.getInitialCoordinates(for: view, in: container, from: initial)
-		let finalPoint	 = self.getFinalCoordinates(for: view, in: container, from: final)
-		let	animatorOptions = options ?? Options()
+		self.initialCoordinates = self.getInitialCoordinates(for: view, in: container, from: initial)
+		self.finalCoordinates = self.getFinalCoordinates(for: view, in: container, from: final)
 
-		self.currentPosition = final
-		self.animate(view: view, in: container, with: animatorOptions, initialPoint: initialPoint, finalPoint: finalPoint, completion: completion)
+		self.initialPosition = initial
+		self.finalPosition = final
+
+		if let initialPoint = self.initialCoordinates,
+			let finalPoint = self.finalCoordinates {
+			self.animate(view: view,
+			             in: container,
+			             with: options ?? Options(),
+			             initialPoint: initialPoint,
+			             finalPoint: finalPoint,
+			             completion: completion)
+		}
 	}
 
 	public func animate(view: UIView, in container: UIView?, with options: Options, initialPoint: CGPoint, finalPoint: CGPoint, completion: ((Void) -> (Void))?) {
@@ -140,7 +158,6 @@ open class DGDialogAnimator {
 
 		let wrapper = (container == nil && options.coverStatusBar) ? self.wrap(view: view) : view
 		wrapper.frame.origin = initialPoint
-
 
 		let blurView = self.blur(view: container, with: options.blurEffect)
 
@@ -180,8 +197,8 @@ open class DGDialogAnimator {
 				               delay: 0,
 				               options: [options.leaveAnimationOptions, .allowUserInteraction],
 				               animations: {
-								wrapper.frame.origin = initialPoint
-				}) { (completed) in
+								wrapper.frame.origin = self.initialCoordinates ?? initialPoint
+				}) { _ in
 					blurView?.removeFromSuperview()
 					wrapper.removeFromSuperview()
 					self.isAnimating = false
@@ -196,7 +213,7 @@ open class DGDialogAnimator {
 		               options: options.enterAnimationOptions,
 		               animations: {
 						wrapper.frame.origin = finalPoint
-		}) { (completed) in
+		}) { _ in
 			guard !options.waiting else {
 				return
 			}
@@ -205,7 +222,7 @@ open class DGDialogAnimator {
 
 	}
 
-	private func wrap(view: UIView) -> UIWindow{
+	private func wrap(view: UIView) -> UIWindow {
 		let window = UIWindow(frame: view.frame)
 		window.isHidden = false
 		window.windowLevel = UIWindowLevelStatusBar + 1
@@ -230,28 +247,28 @@ open class DGDialogAnimator {
 		return blurEffectView
 	}
 
-	private func getInitialCoordinates(for view: UIView, in containerView: UIView?,  from position: Position) -> CGPoint {
+	private func getInitialCoordinates(for view: UIView, in containerView: UIView?,  from position: Position?) -> CGPoint {
 		let container = containerView ?? UIApplication.shared.delegate!.window!!
 
 		switch position {
-		case [.top]:
+		case [.top]?:
 			return  CGPoint(x: container.frame.width/2 - view.frame.width/2, y: -view.frame.height)
-		case [.bottom]:
+		case [.bottom]?:
 			return CGPoint(x: container.frame.width/2 - view.frame.width/2, y: container.frame.height)
-		case [.left]:
+		case [.left]?:
 			return  CGPoint(x: -view.frame.width, y: container.frame.height/2 - view.frame.height/2)
-		case [.right]:
+		case [.right]?:
 			return  CGPoint(x: container.frame.width, y: container.frame.height/2 - view.frame.height/2)
-		case [.top, .left]:
+		case [.top, .left]?:
 			return CGPoint(x: -view.frame.width, y: 0)
-		case [.top, .right]:
+		case [.top, .right]?:
 			return  CGPoint(x: container.frame.width, y: 0)
-		case [.bottom, .left]:
+		case [.bottom, .left]?:
 			return  CGPoint(x: -view.frame.width, y: container.frame.height - view.frame.height)
-		case [.bottom, .right]:
+		case [.bottom, .right]?:
 			return  CGPoint(x: container.frame.width, y: container.frame.height - view.frame.height)
 		default:
-			return CGPoint(x: 0, y:0)
+			return  CGPoint(x: container.frame.width/2 - view.frame.width/2, y: container.frame.height/2 - view.frame.height/2)
 		}
 	}
 
