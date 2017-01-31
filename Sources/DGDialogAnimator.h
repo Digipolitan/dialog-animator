@@ -1,5 +1,5 @@
-#ifndef _DGFRAMEWORKTEMPLATE_H
-#define _DGFRAMEWORKTEMPLATE_H
+#ifndef _DGDIALOGANIMATOR_H
+#define _DGDIALOGANIMATOR_H
 
 #import <Foundation/Foundation.h>
 
@@ -9,4 +9,4 @@ FOUNDATION_EXPORT double DGDialogAnimatorVersionNumber;
 //! Project version string for DGDialogAnimator
 FOUNDATION_EXPORT const unsigned char DGDialogAnimatorVersionString[];
 
-#endif /* _DGFRAMEWORKTEMPLATE_H */
+#endif /* _DGDIALOGANIMATOR_H */

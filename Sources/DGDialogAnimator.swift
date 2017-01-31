@@ -8,23 +8,11 @@
 
 import UIKit
 
-
 open class DGDialogAnimator {
-	/**
-	*	Nested Struct used to maintain default values.
-	*/
-	fileprivate struct Defaults {
-		var animationDuration: TimeInterval
-		var animationDelay: TimeInterval
 
-		init(animationDuration: TimeInterval = 0.3, animationDelay: TimeInterval = 1.0) {
-			self.animationDuration = animationDuration
-			self.animationDelay = animationDelay
-		}
-	}
 	/**
-	*	Nested Struct that hold default pre-registered positions
-	**/
+	 * Nested Struct that hold default pre-registered positions
+	 */
 	public struct Position: OptionSet {
 		public let rawValue: Int
 
@@ -32,65 +20,90 @@ open class DGDialogAnimator {
 			self.rawValue = rawValue
 		}
 
-		public static let top		= Position(rawValue: 1 << 0)
-		public static let right		= Position(rawValue: 1 << 1)
+		public static let top = Position(rawValue: 1 << 0)
+		public static let right = Position(rawValue: 1 << 1)
 		public static let bottom	= Position(rawValue: 1 << 2)
-		public static let left		= Position(rawValue: 1 << 3)
+		public static let left = Position(rawValue: 1 << 3)
 		public static let center	= Position(rawValue: 1 << 4)
 	}
+
 	/**
-	*	Nested Struct used to configure the behavior of the animator.
-	*/
+	 * Nested Struct used to configure the behavior of the animator.
+	 */
 	public struct Options {
-		public var backDrop: Bool
-		public var blurEffect: UIBlurEffectStyle?
+        /**
+         * Perform the dismiss animation if the user touch the background view, default true
+         */
+		public var backdrop: Bool
+        /**
+          * The blur effect to apply, default nil
+          */
+		public var blurEffectStyle: UIBlurEffectStyle?
+        /**
+          * The dialog will be prompt over the window's top view controller, default false
+          */
 		public var coverStatusBar: Bool
-		public var duration: TimeInterval
-		public var hold: TimeInterval
-		public var enterAnimationOptions: UIViewAnimationOptions
-		public var leaveAnimationOptions: UIViewAnimationOptions
-		public var waiting: Bool
+        /**
+          * Animation duration, default 0.3
+          */
+		public var animationDuration: TimeInterval
+        /**
+          * The hold duration of the dialog, default 1.0
+          */
+		public var dismissDelay: TimeInterval
+        /**
+          * The curve animation, default easeOut
+          */
+		public var enterAnimationCurve: UIViewAnimationCurve
+        /**
+          * The curve animation, default easeIn
+          */
+		public var leaveAnimationCurve: UIViewAnimationCurve
 
-		private var _blurIntensity: CGFloat = 1.0
-		public var blurIntensity: CGFloat {
-			get {
-				return _blurIntensity
-			}
-			set {
-				_blurIntensity = max(0, min(1, newValue))
-			}
-		}
+        /**
+          * The dialog will be fix until "dismiss" method called
+          */
+		public var hold: Bool
 
-		public init(coverStatusBar: Bool = false, hold: TimeInterval = 1.0, duration: TimeInterval = 0.3, options: UIViewAnimationOptions = .curveEaseIn) {
-			self.coverStatusBar = coverStatusBar
-			self.blurEffect = .light
-			self.hold = hold
-			self.duration = duration
-			self.enterAnimationOptions = options
-			self.leaveAnimationOptions = options
-			self.backDrop = false
-			self.waiting = false
-		}
-	}
-	/**
-	*	Nested class used to add behavior in dialog's background.
-	*/
-	fileprivate class Background: UIVisualEffectView {
-		var backDrop: Bool = true
+        public init(animationDuration: TimeInterval = 0.3, dismissDelay: TimeInterval = 1, enterAnimationCurve: UIViewAnimationCurve = .easeOut, leaveAnimationCurve: UIViewAnimationCurve = .easeIn) {
+            self.animationDuration = animationDuration
+            self.dismissDelay = dismissDelay
+            self.enterAnimationCurve = enterAnimationCurve
+            self.leaveAnimationCurve = leaveAnimationCurve
+            self.coverStatusBar = false
+            self.blurEffectStyle = .light
+            self.hold = false
+            self.backdrop = true
+        }
 
-		override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-			if self.backDrop {
-				DGDialogAnimator.default.dismiss()
-			}
-			super.touchesEnded(touches, with: event)
-		}
+        static func buildAnimationOptions(animationCurve: UIViewAnimationCurve) -> UIViewAnimationOptions {
+            switch animationCurve {
+                case .easeIn:
+                    return .curveEaseIn
+                case .easeOut:
+                    return .curveEaseOut
+                case .easeInOut:
+                    return .curveEaseInOut
+                case .linear:
+                    return .curveLinear
+            }
+        }
 	}
 
 	open static let `default`: DGDialogAnimator = DGDialogAnimator()
+
 	private init() {
+        self.defaultOptions = Options()
+        self.isLeaving = false
+        self.isVisible = false
 		NotificationCenter.default.removeObserver(self)
 		NotificationCenter.default.addObserver(self, selector: #selector(updateFrameIsAnimating), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
 	}
+
+    private let defaultOptions: Options
+
+    private var isLeaving: Bool
+    private var isVisible: Bool
 
 	private weak var currentView: UIView?
 	private weak var currentContainer: UIView?
@@ -101,33 +114,29 @@ open class DGDialogAnimator {
 	private var finalPosition: Position?
 	private var finalCoordinates: CGPoint?
 
-	private var isLeaving: Bool = false
-	private var isAnimating: Bool = false
 	private var leaveAnimation: ((_ deadline: DispatchTime?) -> Void)?
 
 	public func dismiss() {
 		guard let dismiss = self.leaveAnimation else {
 			return
 		}
-
 		dismiss(.now())
-		self.isAnimating = false
 	}
-
 
 	@objc
 	fileprivate func updateFrameIsAnimating() {
-		self.finalCoordinates = self.getFinalCoordinates(for: self.currentView!, in: self.currentContainer, from: self.finalPosition)
-		self.initialCoordinates = self.getInitialCoordinates(for: self.currentView!, in: self.currentContainer, from: self.initialPosition)
-
-		if let origin = self.finalCoordinates {
-			self.currentView?.frame.origin = origin
-		}
+        if let view = self.currentView {
+            self.finalCoordinates = self.finalCoordinates(for: view, in: self.currentContainer, from: self.finalPosition)
+            self.initialCoordinates = self.initialCoordinates(for: view, in: self.currentContainer, from: self.initialPosition)
+            if let origin = self.finalCoordinates {
+                view.frame.origin = origin
+            }
+        }
 	}
 
 	public func animate(view: UIView, in container: UIView?, with options: Options?, from initial: Position, to final: Position? = nil, completion: ((Void) -> (Void))? = nil) {
-		self.initialCoordinates = self.getInitialCoordinates(for: view, in: container, from: initial)
-		self.finalCoordinates = self.getFinalCoordinates(for: view, in: container, from: final)
+		self.initialCoordinates = self.initialCoordinates(for: view, in: container, from: initial)
+		self.finalCoordinates = self.finalCoordinates(for: view, in: container, from: final)
 
 		self.initialPosition = initial
 		self.finalPosition = final
@@ -136,7 +145,7 @@ open class DGDialogAnimator {
 			let finalPoint = self.finalCoordinates {
 			self.animate(view: view,
 			             in: container,
-			             with: options ?? Options(),
+			             with: options ?? self.defaultOptions,
 			             initialPoint: initialPoint,
 			             finalPoint: finalPoint,
 			             completion: completion)
@@ -144,47 +153,42 @@ open class DGDialogAnimator {
 	}
 
 	public func animate(view: UIView, in container: UIView?, with options: Options, initialPoint: CGPoint, finalPoint: CGPoint, completion: ((Void) -> (Void))?) {
-		guard (container  == nil || !options.coverStatusBar) else {
+
+        guard !self.isVisible else {
+            return
+        }
+		guard container == nil || !options.coverStatusBar else {
 			fatalError("container must be nil when `coverStatusBar` options is enabled")
 		}
+		self.currentView = view
+		self.currentContainer = container
+		self.isVisible = true
 
-		guard !self.isAnimating else {
-			return
-		}
+		let wrapperView = (container == nil && options.coverStatusBar) ? self.wrap(view: view) : view
+		wrapperView.frame.origin = initialPoint
 
-		self.currentView		= view
-		self.currentContainer	= container
-		self.isAnimating		= true
-
-		let wrapper = (container == nil && options.coverStatusBar) ? self.wrap(view: view) : view
-		wrapper.frame.origin = initialPoint
-
-		let blurView = self.blur(view: container, with: options.blurEffect)
-
+        let blurView = self.blur(view: container, with: options.blurEffectStyle)
 		if blurView != nil {
-			blurView?.alpha = 0
-			blurView?.backDrop = options.backDrop
+			blurView!.alpha = 0
 			if container != nil {
 				container?.addSubview(blurView!)
-			}
-			else {
-				UIApplication.shared.delegate!.window!!.addSubview(blurView!)
+            } else if let window = UIApplication.shared.keyWindow {
+                window.addSubview(blurView!)
 			}
 
 			UIView.animate(withDuration: 0.2, animations: {
-				blurView?.alpha = options.blurIntensity
+				blurView!.alpha = 1
 			})
 		}
 
-		container?.addSubview(wrapper)
+		container?.addSubview(wrapperView)
 		self.leaveAnimation = { (dispatchTime) in
-			let deadline = (dispatchTime == nil) ? .now() + (options.waiting ? 0 : options.hold) : dispatchTime!
+			let deadline = (dispatchTime == nil) ? .now() + (options.hold ? 0 : options.dismissDelay) : dispatchTime!
 
 			DispatchQueue.main.asyncAfter(deadline: deadline, execute: {
 				guard !self.isLeaving else {
 					return
 				}
-
 				self.isLeaving = true
 
 				if blurView != nil {
@@ -193,61 +197,61 @@ open class DGDialogAnimator {
 					})
 				}
 
-				UIView.animate(withDuration: options.duration,
+				UIView.animate(withDuration: options.animationDuration,
 				               delay: 0,
-				               options: [options.leaveAnimationOptions, .allowUserInteraction],
+				               options: Options.buildAnimationOptions(animationCurve: options.leaveAnimationCurve),
 				               animations: {
-								wrapper.frame.origin = self.initialCoordinates ?? initialPoint
+								wrapperView.frame.origin = self.initialCoordinates ?? initialPoint
 				}) { _ in
 					blurView?.removeFromSuperview()
-					wrapper.removeFromSuperview()
-					self.isAnimating = false
+					wrapperView.removeFromSuperview()
+					self.isVisible = false
 					self.isLeaving = false
 					completion?()
 				}
 			})
 		}
 
-		UIView.animate(withDuration: options.duration,
+		UIView.animate(withDuration: options.animationDuration,
 		               delay: 0,
-		               options: options.enterAnimationOptions,
+		               options: Options.buildAnimationOptions(animationCurve: options.enterAnimationCurve),
 		               animations: {
-						wrapper.frame.origin = finalPoint
+						wrapperView.frame.origin = finalPoint
 		}) { _ in
-			guard !options.waiting else {
+			guard !options.hold else {
 				return
 			}
 			self.leaveAnimation?(nil)
 		}
-
 	}
 
 	private func wrap(view: UIView) -> UIWindow {
-		let window = UIWindow(frame: view.frame)
+		let window = UIWindow(frame: view.bounds)
 		window.isHidden = false
 		window.windowLevel = UIWindowLevelStatusBar + 1
 		window.addSubview(view)
 		return window
 	}
 
-	private func blur(view: UIView?, with effectStyle: UIBlurEffectStyle?) -> Background? {
+	private func blur(view: UIView?, with effectStyle: UIBlurEffectStyle?) -> UIVisualEffectView? {
 		guard let style = effectStyle else {
 			return nil
 		}
-
 		guard !UIAccessibilityIsReduceTransparencyEnabled() else {
 			return nil
 		}
-
-		let container = view ?? UIApplication.shared.delegate!.window!!
+        guard let containerView = view ?? UIApplication.shared.keyWindow else {
+            return nil
+        }
 		let blurEffect = UIBlurEffect(style: style)
-		let blurEffectView = Background(effect: blurEffect)
-		blurEffectView.frame = container.bounds
+		let blurEffectView = UIVisualEffectView(effect: blurEffect)
+		blurEffectView.frame = containerView.bounds
 		blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 		return blurEffectView
 	}
 
-	private func getInitialCoordinates(for view: UIView, in containerView: UIView?,  from position: Position?) -> CGPoint {
+	private func initialCoordinates(for view: UIView, in containerView: UIView?, from position: Position?) -> CGPoint {
+
 		let container = containerView ?? UIApplication.shared.delegate!.window!!
 
 		switch position {
@@ -272,7 +276,7 @@ open class DGDialogAnimator {
 		}
 	}
 
-	private func getFinalCoordinates(for view: UIView, in containerView: UIView?,  from position: Position?) -> CGPoint {
+	private func finalCoordinates(for view: UIView, in containerView: UIView?, from position: Position?) -> CGPoint {
 		let container = containerView ?? UIApplication.shared.delegate!.window!!
 
 		switch position {

@@ -26,7 +26,7 @@ class YesNoAlertController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 	@IBAction func dismiss(_ sender: Any) {
 		DGDialogAnimator.default.dismiss()
 	}

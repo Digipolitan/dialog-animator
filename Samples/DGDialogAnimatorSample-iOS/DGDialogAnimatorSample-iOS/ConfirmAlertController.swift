@@ -10,7 +10,7 @@ import UIKit
 import DGDialogAnimator
 
 class  ConfirmAlertController: UIViewController {
-        
+
 	@IBOutlet weak var btnConfirm: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -26,25 +26,23 @@ class ControlCenterViewController: UIViewController {
 			"Warning",
 			"Custom"
 		],
-		1 : [ "Confirm", "Yes/No", "Input"],
-		2 : [ "Light"]
+		1: [ "Confirm", "Yes/No", "Input"],
+		2: [ "Light"]
 	]
-
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
 
-		var options = DGDialogAnimator.Options(coverStatusBar: false, hold: 5, duration: 0.3, options: .curveEaseIn)
-
+		var options = DGDialogAnimator.Options(dismissDelay: 5)
 
 		self.actions = [
 			IndexPath(row: 0, section: 0): { _ in
-				options.waiting = false
-				options.hold = 5
-				options.backDrop = false
-				options.blurEffect = nil
+				options.hold = false
+				options.dismissDelay = 5
+				options.backdrop = false
+				options.blurEffectStyle = nil
 
 				guard let toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast else {
 					return
@@ -60,9 +58,9 @@ class ControlCenterViewController: UIViewController {
 				DGDialogAnimator.default.animate(view: toast, in: self.view, with: options, from: .top, to: .top)
 			},
 			IndexPath(row: 1, section: 0): { _ in
-				options.waiting = false
-				options.backDrop = false
-				options.blurEffect = nil
+				options.hold = false
+				options.backdrop = false
+				options.blurEffectStyle = nil
 
 				guard let toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast else {
 					return
@@ -77,9 +75,9 @@ class ControlCenterViewController: UIViewController {
 				DGDialogAnimator.default.animate(view: toast, in: self.view, with: options, from: .top, to: .top)
 			},
 			IndexPath(row: 2, section: 0): { _ in
-				options.waiting = false
-				options.backDrop = false
-				options.blurEffect = nil
+				options.hold = false
+				options.backdrop = false
+				options.blurEffectStyle = nil
 
 				guard let toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast else {
 					return
@@ -94,10 +92,9 @@ class ControlCenterViewController: UIViewController {
 				DGDialogAnimator.default.animate(view: toast, in: self.view, with: options, from: .top, to: .top)
 			},
 			IndexPath(row: 3, section: 0): { _ in
-				options.waiting = false
-				options.backDrop = false
-				options.blurEffect = nil
-
+				options.hold = false
+				options.backdrop = false
+				options.blurEffectStyle = nil
 
 				guard let toast = Bundle.main.loadNibNamed(String(describing: Toast.self), owner: self, options: nil)?.first as? Toast else {
 					return
@@ -112,8 +109,8 @@ class ControlCenterViewController: UIViewController {
 				DGDialogAnimator.default.animate(view: toast, in: self.view, with: options, from: .top, to: .top)
 			},
 			IndexPath(row: 0, section: 1): { _ in
-				options.waiting = true
-				options.blurEffect = nil
+				options.hold = true
+				options.blurEffectStyle = nil
 
 				self.tableView.isScrollEnabled = false
 				self.confirmAlertController.view.frame.size = CGSize(width: self.view.bounds.width - 50, height: 200)
@@ -122,8 +119,8 @@ class ControlCenterViewController: UIViewController {
 				}
 			},
 			IndexPath(row: 1, section: 1): { _ in
-				options.waiting = true
-				options.blurEffect = nil
+				options.hold = true
+				options.blurEffectStyle = nil
 
 				self.tableView.isScrollEnabled = false
 				self.yesNoAlertController.view.frame.size = CGSize(width: self.view.bounds.width - 50, height: 200)
@@ -132,8 +129,8 @@ class ControlCenterViewController: UIViewController {
 				}
 			},
 			IndexPath(row: 2, section: 1): { _ in
-				options.waiting = true
-				options.blurEffect = nil
+				options.hold = true
+				options.blurEffectStyle = nil
 
 				self.tableView.isScrollEnabled = false
 				self.intputAlertController.view.frame.size = CGSize(width: self.view.bounds.width - 50, height: 200)
@@ -142,10 +139,9 @@ class ControlCenterViewController: UIViewController {
 				}
 			},
 			IndexPath(row: 0, section: 2): { _ in
-				options.waiting = true
-				options.backDrop = true
-				options.blurEffect = .dark
-				options.blurIntensity = 1
+				options.hold = true
+				options.backdrop = true
+				options.blurEffectStyle = .dark
 
 				self.tableView.isScrollEnabled = false
 				self.modalController.view.frame.size = CGSize(width: self.view.bounds.width - 20, height: 450)
@@ -156,14 +152,7 @@ class ControlCenterViewController: UIViewController {
 			}
 		]
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
 }
-
-
 
 extension ControlCenterViewController: UITableViewDelegate, UITableViewDataSource {
 	func numberOfSections(in tableView: UITableView) -> Int {
@@ -181,14 +170,13 @@ extension ControlCenterViewController: UITableViewDelegate, UITableViewDataSourc
 		if section == 1 {
 			return "Alerts"
 		}
-
 		return "Modals"
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier")!
 
-		if (indexPath.section == 0 && indexPath.row == 4) {
+		if indexPath.section == 0 && indexPath.row == 4 {
 			cell.accessoryType = .disclosureIndicator
 		}
 
@@ -197,14 +185,14 @@ extension ControlCenterViewController: UITableViewDelegate, UITableViewDataSourc
 	}
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		if (indexPath.section == 0 && indexPath.row == 4) {
+		if indexPath.section == 0 && indexPath.row == 4 {
 			self.performSegue(withIdentifier: "configuration", sender: nil)
 		}
 
 		guard let action = self.actions[indexPath] else {
 			return
 		}
-		
+
 		action()
 	}
 }

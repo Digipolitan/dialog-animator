@@ -22,8 +22,7 @@ class PositionViewController: UIViewController {
 		set {
 			if self.title == "Initial Position" {
 				self.initialPosition = newValue
-			}
-			else {
+			} else {
 				self.finalPosition = newValue
 			}
 		}
@@ -45,8 +44,7 @@ class PositionViewController: UIViewController {
 			let controller = segue.destination as? PositionViewController
 			controller!.initialPosition = self.initialPosition
 			controller!.options = self.options
-		}
-		else {
+		} else {
 			let controller = segue.destination as? DemoViewController
 			controller!.from = self.initialPosition
 			controller!.to = self.finalPosition
@@ -58,8 +56,7 @@ class PositionViewController: UIViewController {
 		self.btns.forEach { (btn) in
 			if btn == button {
 				btn.backgroundColor = UIColor(colorLiteralRed: 255/255, green: 109/255, blue: 91/255, alpha: 1)
-			}
-			else {
+			} else {
 				btn.backgroundColor = UIColor(colorLiteralRed: 78/255, green: 170/255, blue: 173/255, alpha: 1)
 			}
 		}
@@ -104,6 +101,4 @@ class PositionViewController: UIViewController {
 		self.position = [.top, .left]
 		self.setBackgroundFromSelection(button: sender)
 	}
-
 }
-

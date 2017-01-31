@@ -25,38 +25,28 @@ class ConfigurationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		options.backDrop = true
-		options.blurEffect = .dark
-		options.blurIntensity = 1.0
-		options.coverStatusBar = false
-		self.lblDuration.text = "\(self.options.hold)"
-		self.lblHold.text = "\(self.options.duration)"
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+		options.backdrop = true
+		options.blurEffectStyle = .dark
+		self.lblDuration.text = "\(self.options.animationDuration)"
+		self.lblHold.text = "\(self.options.dismissDelay)"
     }
 
 	// MARK: Actions
 	@IBAction func didChangeBackdrop(_ sender: Any) {
-		self.options.backDrop = self.backdropSegment.selectedSegmentIndex == 0
+		self.options.backdrop = self.backdropSegment.selectedSegmentIndex == 0
 	}
 
 	@IBAction func didChangeBlurEffect(_ sender: Any) {
-		self.options.blurEffect = self.blurEffects[self.blurEffectSegment.selectedSegmentIndex]
-		if options.blurEffect == nil {
-			options.blurIntensity = 0
+		self.options.blurEffectStyle = self.blurEffects[self.blurEffectSegment.selectedSegmentIndex]
+		if options.blurEffectStyle == nil {
 			self.blurIntensitySlider.value = 0
 			self.blurIntensitySlider.isEnabled = false
-		}
-		else {
+		} else {
 			self.blurIntensitySlider.isEnabled = true
 		}
 	}
 
 	@IBAction func didChangeBlurIntensity(_ sender: Any) {
-		self.options.blurIntensity = CGFloat(self.blurIntensitySlider.value)
 	}
 
 	@IBAction func didChangeCoverStatusBar(_ sender: Any) {
@@ -64,23 +54,22 @@ class ConfigurationViewController: UIViewController {
 	}
 
 	@IBAction func didChangeAnimationDuration(_ sender: Any) {
-		self.options.duration = Double(self.animationDurationSlider.value)
-		self.lblDuration.text = String(format: "%.2f", self.options.duration)
+		self.options.animationDuration = Double(self.animationDurationSlider.value)
+		self.lblDuration.text = String(format: "%.2f", self.options.animationDuration)
 	}
 
 	@IBAction func didChangeHoldDuration(_ sender: Any) {
-		self.options.hold = Double(self.holdDurationSlider.value)
-		self.lblHold.text = String(format: "%.2f", self.options.hold)
+		self.options.dismissDelay = Double(self.holdDurationSlider.value)
+		self.lblHold.text = String(format: "%.2f", self.options.dismissDelay)
 	}
 
 	@IBAction func didChangeIsWaiting(_ sender: Any) {
-		self.options.waiting = self.waitingSegment.selectedSegmentIndex == 0
-		if self.options.waiting {
+		self.options.hold = self.waitingSegment.selectedSegmentIndex == 0
+		if self.options.hold {
 			self.holdDurationSlider.isEnabled = false
 			self.holdDurationSlider.value = 0
-			self.options.hold = 0
-		}
-		else {
+			self.options.dismissDelay = 0
+		} else {
 			self.holdDurationSlider.isEnabled = true
 		}
 	}
@@ -89,7 +78,6 @@ class ConfigurationViewController: UIViewController {
 		guard let controller: PositionViewController = segue.destination as? PositionViewController else {
 			return
 		}
-
 		controller.options = self.options
 	}
 }
