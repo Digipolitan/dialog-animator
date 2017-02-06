@@ -48,10 +48,14 @@ end
 ```swift
 
 let toast = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds/2, height: 100))    
-DGDialogAnimator.default.animate(view: toast, in: self.view, path: DGDialogAnimator.AnimationPath(initial: .top, intermediate: .top))
+DGDialogAnimator.default.animate(view: toast,
+                                   in: self.view,
+                                 path: DGDialogAnimator.AnimationPath(initial: .top, intermediate: .top))
 
 let notification = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds, height: 250))    
-DGDialogAnimator.default.animate(view: notification, in: self.view, path: DGDialogAnimator.AnimationPath(initial: [.top, .left], intermediate: [.top, .right]))
+DGDialogAnimator.default.animate(view: notification,
+                                   in: self.view,
+                                 path: DGDialogAnimator.AnimationPath(initial: [.top, .left], intermediate: [.top, .right]))
 ```
 
 ### Configuration
@@ -65,7 +69,10 @@ options.dismissDelay = 5
 options.backdrop = false
 options.blurEffectStyle = nil
 // ....
-DGDialogAnimator.default.animate(view: toast, in: self.view, with: options, path: DGDialogAnimator.AnimationPath(initial: .top, intermediate: .top))
+DGDialogAnimator.default.animate(view: toast,
+                                   in: self.view,
+                                 with: options,
+                                 path: DGDialogAnimator.AnimationPath(initial: .top, intermediate: .top))
 
 ```
 
@@ -74,7 +81,7 @@ Here the list of all available options :
 | Property | type | Description  |
 | --- | --- | --- |
 | backdrop | `Bool` | Tells if the background behind the animated view will dismiss the view on touch |
-| blurEffectStyle | `UIBlurEffectStyle?` | The blur effect added to the background. 3 values are available `.light` `.extraLight` `.dark` |
+| blurEffectStyle | `UIBlurEffectStyle` | The blur effect added to the background. 3 values are available `.light` `.extraLight` `.dark` |
 | coverStatusBar | `Bool` | if set to `true` you must **NOT** set the container because the component will use automatically `UIWindow`. |
 | animationDuration | `TimeInterval` | How long the animation will last. |
 | dismissDelay | `TimeInterval` | How long the animated view will hold before dismissing itself |
