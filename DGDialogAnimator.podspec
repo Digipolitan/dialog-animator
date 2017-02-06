@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name = "DGDialogAnimator"
 s.version = "1.0.0"
-s.summary = "This is a summary."
+s.summary = "UIView animator used to display dialog"
 s.homepage = "https://github.com/Digipolitan/dialog-animator-swift"
 s.authors = "Digipolitan"
 s.source = { :git => "https://github.com/Digipolitan/dialog-animator-swift.git", :tag => "v#{s.version}" }

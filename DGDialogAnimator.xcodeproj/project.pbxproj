@@ -15,6 +15,10 @@
 		A3169E781DE083D900BABAFD /* DGDialogAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGDialogAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A38EF2CA1DECF97000637484 /* DGDialogAnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EF2C71DECF97000637484 /* DGDialogAnimatorTests.swift */; };
 		A38EF2CB1DECF97000637484 /* DGDialogAnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EF2C71DECF97000637484 /* DGDialogAnimatorTests.swift */; };
+		A3BEFEC61E48D07400706936 /* DialogWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEFEC51E48D07400706936 /* DialogWindow.swift */; };
+		A3BEFEC71E48D07400706936 /* DialogWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEFEC51E48D07400706936 /* DialogWindow.swift */; };
+		A3BEFEC91E48D12D00706936 /* DialogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEFEC81E48D12D00706936 /* DialogInfo.swift */; };
+		A3BEFECA1E48D12D00706936 /* DialogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEFEC81E48D12D00706936 /* DialogInfo.swift */; };
 		AE667FDF1E2FAEE0007A401B /* DGDialogAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE667FDE1E2FAEE0007A401B /* DGDialogAnimator.swift */; };
 		B3F8B2FE9915AA444D8C6D45 /* Pods_Frameworks_DGDialogAnimator_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3580F26DE22E1E33B431715 /* Pods_Frameworks_DGDialogAnimator_iOS.framework */; };
 		D8F60E6EB4AFFE0A297ADE44 /* Pods_Frameworks_DGDialogAnimator_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262BD19E0FD8BDA09E1DC127 /* Pods_Frameworks_DGDialogAnimator_tvOS.framework */; };
@@ -54,6 +58,8 @@
 		A3169E141DE072C800BABAFD /* DGDialogAnimatorTests-OSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DGDialogAnimatorTests-OSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169E751DE083D900BABAFD /* DGDialogAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGDialogAnimator.h; sourceTree = "<group>"; };
 		A38EF2C71DECF97000637484 /* DGDialogAnimatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGDialogAnimatorTests.swift; sourceTree = "<group>"; };
+		A3BEFEC51E48D07400706936 /* DialogWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogWindow.swift; sourceTree = "<group>"; };
+		A3BEFEC81E48D12D00706936 /* DialogInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInfo.swift; sourceTree = "<group>"; };
 		A3E665D64974F430CFDDB352 /* Pods-Frameworks-DGDialogAnimator-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDialogAnimator-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDialogAnimator-iOS/Pods-Frameworks-DGDialogAnimator-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A52D130A29B0FE08E0667C5E /* Pods-Tests-DGDialogAnimatorTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDialogAnimatorTests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDialogAnimatorTests-iOS/Pods-Tests-DGDialogAnimatorTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		AE667FDE1E2FAEE0007A401B /* DGDialogAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGDialogAnimator.swift; sourceTree = "<group>"; };
@@ -146,8 +152,10 @@
 			isa = PBXGroup;
 			children = (
 				AE667FDE1E2FAEE0007A401B /* DGDialogAnimator.swift */,
+				A3BEFEC51E48D07400706936 /* DialogWindow.swift */,
 				A3169E751DE083D900BABAFD /* DGDialogAnimator.h */,
 				A3169DCC1DE0629100BABAFD /* Info.plist */,
+				A3BEFEC81E48D12D00706936 /* DialogInfo.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -310,7 +318,7 @@
 					A3169DEE1DE0718900BABAFD = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 582762VK3P;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					A3169DF61DE0718900BABAFD = {
@@ -558,6 +566,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE667FDF1E2FAEE0007A401B /* DGDialogAnimator.swift in Sources */,
+				A3BEFEC61E48D07400706936 /* DialogWindow.swift in Sources */,
+				A3BEFEC91E48D12D00706936 /* DialogInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +583,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3BEFECA1E48D12D00706936 /* DialogInfo.swift in Sources */,
+				A3BEFEC71E48D07400706936 /* DialogWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,6 +800,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -810,6 +823,7 @@
 				PRODUCT_NAME = DGDialogAnimator;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -819,6 +833,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4234D4BA57B27A510DCFD8A7 /* Pods-Tests-DGDialogAnimatorTests-tvOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 582762VK3P;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -834,6 +849,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DC98EB7F06E933D2BB2879A /* Pods-Tests-DGDialogAnimatorTests-tvOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 582762VK3P;
 				INFOPLIST_FILE = Tests/Info.plist;
