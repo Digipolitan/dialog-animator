@@ -1,0 +1,1133 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22D536C54ECB3DB2D0D6EFBC59E6C15E /* Pods-Samples-DGDialogAnimatorSample-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AD1C88BFB826EDCA3F43AD87A9F966 /* Pods-Samples-DGDialogAnimatorSample-tvOS-dummy.m */; };
+		2C516CABDF5FA1CD4614F0C4FD5227CE /* Pods-Tests-DGDialogAnimatorTests-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCF64E2116914F1D9745FC556EEDFAD2 /* Pods-Tests-DGDialogAnimatorTests-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		307B31E9AEBE931184319514A38EFBEB /* Pods-Tests-DGDialogAnimatorTests-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B15AF70EE656AEFCF4B5A2D44A39908 /* Pods-Tests-DGDialogAnimatorTests-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3318DEAED815359455D7F3824764B62A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		480812E5BBA59E3939A70CA130146EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+		5CC4A089DEB4B33D7705DD4FFFF94999 /* Pods-Samples-DGDialogAnimatorSample-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 801EAF2FD013F038B279200592932A69 /* Pods-Samples-DGDialogAnimatorSample-iOS-dummy.m */; };
+		657FCBA922F620291051D20B3E24321F /* Pods-Tests-DGDialogAnimatorTests-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47966104152F461492268B0302D5A989 /* Pods-Tests-DGDialogAnimatorTests-iOS-dummy.m */; };
+		7C7B6ED9EA6F524AC0E7C35DC9472636 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		98C3F3C3A077CBEE018B952F62C38DA0 /* Pods-Samples-DGDialogAnimatorSample-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB53F0BB26FE8AD588E65FD958D1AD0F /* Pods-Samples-DGDialogAnimatorSample-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CFB8590DE8A98100CB80BADEF6E9AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+		A8F7AA7C0A1C37EBDDE488294069AFF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		AB8718E8114931831BC5506271EEFDED /* Pods-Samples-DGDialogAnimatorSample-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EF178CE289F01DA834CD24A4C91CE32 /* Pods-Samples-DGDialogAnimatorSample-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEEEFF03BD49A5E499821874F3C7FDD4 /* Pods-Frameworks-DGDialogAnimator-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB2FF5A2CA600C702EC943D8586298D /* Pods-Frameworks-DGDialogAnimator-iOS-dummy.m */; };
+		BE72FCF7D045F252BA005E46B841B071 /* Pods-Frameworks-DGDialogAnimator-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8391B0CF66F3D1A0548491FF49B625D /* Pods-Frameworks-DGDialogAnimator-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D34568D5BEC31247B0F36A7CBDCABF6C /* Pods-Frameworks-DGDialogAnimator-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45610B76F66AE43457810461F7B4BCB0 /* Pods-Frameworks-DGDialogAnimator-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7B020B92DCADC4BD007F9F09F8EB86C /* Pods-Frameworks-DGDialogAnimator-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EEE98C4C879EEFAFFE44A26C46110 /* Pods-Frameworks-DGDialogAnimator-tvOS-dummy.m */; };
+		EE65FA88E759C4046143AA0E87016A28 /* Pods-Tests-DGDialogAnimatorTests-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5425A1B30F8B2BAC6A0AE5C972914F5A /* Pods-Tests-DGDialogAnimatorTests-tvOS-dummy.m */; };
+		F9346C2A0AD653D03E9A8AB0264AA026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		036C7255B26479DA346D340524C5917B /* Pods-Frameworks-DGDialogAnimator-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGDialogAnimator-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		081EB11F7F7B8AA371C07141E9400221 /* Pods-Samples-DGDialogAnimatorSample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGDialogAnimatorSample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		0F1DBBED498E11B72CCFDC4517D5AF9D /* Pods-Samples-DGDialogAnimatorSample-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Samples-DGDialogAnimatorSample-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		10F332A4143CD894C946DFD3C33C1687 /* Pods_Frameworks_DGDialogAnimator_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Frameworks_DGDialogAnimator_tvOS.framework; path = "Pods-Frameworks-DGDialogAnimator-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11679F591737231E44B54A5974D26102 /* Pods_Tests_DGDialogAnimatorTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests_DGDialogAnimatorTests_iOS.framework; path = "Pods-Tests-DGDialogAnimatorTests-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		148F5BBC8B86C2A95DE1C8F19F44CDB2 /* Pods-Samples-DGDialogAnimatorSample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGDialogAnimatorSample-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		18AD8A7E008EF97CE687F1BAACAA7953 /* Pods-Frameworks-DGDialogAnimator-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Frameworks-DGDialogAnimator-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		21878E0DA6CFDA11B464A33E486DC54A /* Pods-Samples-DGDialogAnimatorSample-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGDialogAnimatorSample-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		346E2EC7211366DFDFA5CA7E7BA4E436 /* Pods-Tests-DGDialogAnimatorTests-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGDialogAnimatorTests-iOS-frameworks.sh"; sourceTree = "<group>"; };
+		36AFC34469DB78593C4B099C51FE6AB2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C79D9A55A47AC5B599005689D08082A /* Pods-Frameworks-DGDialogAnimator-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGDialogAnimator-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		45610B76F66AE43457810461F7B4BCB0 /* Pods-Frameworks-DGDialogAnimator-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Frameworks-DGDialogAnimator-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		47966104152F461492268B0302D5A989 /* Pods-Tests-DGDialogAnimatorTests-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-DGDialogAnimatorTests-iOS-dummy.m"; sourceTree = "<group>"; };
+		4A65EA929EDFE13CF5DD0E42E609C9D4 /* Pods_Samples_DGDialogAnimatorSample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Samples_DGDialogAnimatorSample_tvOS.framework; path = "Pods-Samples-DGDialogAnimatorSample-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AD12C983EFBF3C311BCAEFDC05637EB /* Pods-Frameworks-DGDialogAnimator-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Frameworks-DGDialogAnimator-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		4D46FA7ECA1659E6AC8AD5CE5357E7DB /* Pods-Samples-DGDialogAnimatorSample-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGDialogAnimatorSample-tvOS-frameworks.sh"; sourceTree = "<group>"; };
+		4E1DC490969FA9B4BD03F84C95CCED04 /* Pods-Samples-DGDialogAnimatorSample-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGDialogAnimatorSample-tvOS-resources.sh"; sourceTree = "<group>"; };
+		4F74897C3CCE20AB818FDAA36189050B /* Pods-Frameworks-DGDialogAnimator-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Frameworks-DGDialogAnimator-iOS-resources.sh"; sourceTree = "<group>"; };
+		517C0CB5F48D44E0ABA011708CEE0334 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5425A1B30F8B2BAC6A0AE5C972914F5A /* Pods-Tests-DGDialogAnimatorTests-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-DGDialogAnimatorTests-tvOS-dummy.m"; sourceTree = "<group>"; };
+		5A6A14D509168853436AC442621B9F54 /* Pods-Tests-DGDialogAnimatorTests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGDialogAnimatorTests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		5AE96ADF513C0CFD8F51B0E9CF8E710B /* Pods-Frameworks-DGDialogAnimator-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGDialogAnimator-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		5B15AF70EE656AEFCF4B5A2D44A39908 /* Pods-Tests-DGDialogAnimatorTests-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-DGDialogAnimatorTests-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		5D3FA106F4F57DCEE615797E6AC2E33F /* Pods-Frameworks-DGDialogAnimator-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Frameworks-DGDialogAnimator-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		60C38238FA859394BB74525AB3EE067B /* Pods-Samples-DGDialogAnimatorSample-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGDialogAnimatorSample-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		66084CBA7B9A8C64F7A85F6A3C997F04 /* Pods-Samples-DGDialogAnimatorSample-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Samples-DGDialogAnimatorSample-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		6B5087E7A5028A29C406F9869DD47AF1 /* Pods-Tests-DGDialogAnimatorTests-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-DGDialogAnimatorTests-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6F1EEE98C4C879EEFAFFE44A26C46110 /* Pods-Frameworks-DGDialogAnimator-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Frameworks-DGDialogAnimator-tvOS-dummy.m"; sourceTree = "<group>"; };
+		76FF63FED14DA55BC499EDF6CF25BECA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B6FC64EE5F1B05F85F4E24876475156 /* Pods-Samples-DGDialogAnimatorSample-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Samples-DGDialogAnimatorSample-tvOS.modulemap"; sourceTree = "<group>"; };
+		7D6485B17017E7A84A9C024AFBFC5F06 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		801EAF2FD013F038B279200592932A69 /* Pods-Samples-DGDialogAnimatorSample-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Samples-DGDialogAnimatorSample-iOS-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96894C3E3B9DFD1E2AAEFF2083FFC6D0 /* Pods-Tests-DGDialogAnimatorTests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGDialogAnimatorTests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9BDC23A27750846570B7433294ADEFD6 /* Pods-Samples-DGDialogAnimatorSample-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Samples-DGDialogAnimatorSample-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D166C1268E85635F05415CA58B6AA2F /* Pods-Frameworks-DGDialogAnimator-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Frameworks-DGDialogAnimator-tvOS-resources.sh"; sourceTree = "<group>"; };
+		9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9EF178CE289F01DA834CD24A4C91CE32 /* Pods-Samples-DGDialogAnimatorSample-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Samples-DGDialogAnimatorSample-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		A053109093283A8334B23DC7AA87D6D0 /* Pods_Frameworks_DGDialogAnimator_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Frameworks_DGDialogAnimator_iOS.framework; path = "Pods-Frameworks-DGDialogAnimator-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A09F4A1E3DCEB239E64358AE5B06AC9F /* Pods-Tests-DGDialogAnimatorTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGDialogAnimatorTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A8106DF46A0CD1C6DEE53783B253608A /* Pods-Tests-DGDialogAnimatorTests-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Tests-DGDialogAnimatorTests-iOS.modulemap"; sourceTree = "<group>"; };
+		A8391B0CF66F3D1A0548491FF49B625D /* Pods-Frameworks-DGDialogAnimator-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Frameworks-DGDialogAnimator-iOS-umbrella.h"; sourceTree = "<group>"; };
+		A91CE39A31542EA846EAB1C858DDCD9E /* Pods-Tests-DGDialogAnimatorTests-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGDialogAnimatorTests-tvOS-frameworks.sh"; sourceTree = "<group>"; };
+		AAFBAA8D9E4C4EE9C5031122D0AC1948 /* Pods-Frameworks-DGDialogAnimator-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Frameworks-DGDialogAnimator-iOS.modulemap"; sourceTree = "<group>"; };
+		B40A947B7D6E06F9D12D37EC3CB8307D /* Pods-Frameworks-DGDialogAnimator-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Frameworks-DGDialogAnimator-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B6D27D83466E9A2F5FBC329E4E96783E /* Pods-Samples-DGDialogAnimatorSample-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGDialogAnimatorSample-iOS-resources.sh"; sourceTree = "<group>"; };
+		B76DB3F62B5E53BCDD1F118C22945A5C /* Pods-Frameworks-DGDialogAnimator-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGDialogAnimator-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		BEE53EB3A3FFAC271C0D2C977023B444 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFE5DA811A248C9D94D31F8DE1A68100 /* Pods-Tests-DGDialogAnimatorTests-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-DGDialogAnimatorTests-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		C6AD1C88BFB826EDCA3F43AD87A9F966 /* Pods-Samples-DGDialogAnimatorSample-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Samples-DGDialogAnimatorSample-tvOS-dummy.m"; sourceTree = "<group>"; };
+		C8649A4B78D7630712601A12DE7A85F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9245AF365CC44EBB529ADC823150584 /* Pods-Tests-DGDialogAnimatorTests-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGDialogAnimatorTests-tvOS-resources.sh"; sourceTree = "<group>"; };
+		C934DA293DEE2223C99C8D7926009781 /* Pods-Tests-DGDialogAnimatorTests-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-DGDialogAnimatorTests-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		CFC4F89AB5372F7E5F0A70A1375DCE9A /* Pods-Tests-DGDialogAnimatorTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGDialogAnimatorTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D7426B238F66F6D432226F33084E1868 /* Pods-Frameworks-DGDialogAnimator-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Frameworks-DGDialogAnimator-tvOS.modulemap"; sourceTree = "<group>"; };
+		DA3889A21F2E6BF3209ADB8ED1478C4A /* Pods-Samples-DGDialogAnimatorSample-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Samples-DGDialogAnimatorSample-iOS.modulemap"; sourceTree = "<group>"; };
+		DB53F0BB26FE8AD588E65FD958D1AD0F /* Pods-Samples-DGDialogAnimatorSample-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Samples-DGDialogAnimatorSample-iOS-umbrella.h"; sourceTree = "<group>"; };
+		E49DCA20829A435B084F434E3C735F0E /* Pods-Tests-DGDialogAnimatorTests-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-DGDialogAnimatorTests-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E90C35C204875A6C0B0BC6BD11691FBC /* Pods-Samples-DGDialogAnimatorSample-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Samples-DGDialogAnimatorSample-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		EDB2FF5A2CA600C702EC943D8586298D /* Pods-Frameworks-DGDialogAnimator-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Frameworks-DGDialogAnimator-iOS-dummy.m"; sourceTree = "<group>"; };
+		F13AAEB68EDE9988AB99BB6778A58EF3 /* Pods_Samples_DGDialogAnimatorSample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Samples_DGDialogAnimatorSample_iOS.framework; path = "Pods-Samples-DGDialogAnimatorSample-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D7FCA32241D6317B44FF3B5EA59912 /* Pods-Tests-DGDialogAnimatorTests-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGDialogAnimatorTests-iOS-resources.sh"; sourceTree = "<group>"; };
+		F53F92ED85A7EA52DE7DDD921150DA59 /* Pods-Tests-DGDialogAnimatorTests-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Tests-DGDialogAnimatorTests-tvOS.modulemap"; sourceTree = "<group>"; };
+		F5A7BFC6AC5BAF8B1BED6120D85317EE /* Pods-Samples-DGDialogAnimatorSample-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGDialogAnimatorSample-iOS-frameworks.sh"; sourceTree = "<group>"; };
+		F6DE7EDD82F7D0D3B4F8C6D5F50BA6B3 /* Pods_Tests_DGDialogAnimatorTests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests_DGDialogAnimatorTests_tvOS.framework; path = "Pods-Tests-DGDialogAnimatorTests-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCF64E2116914F1D9745FC556EEDFAD2 /* Pods-Tests-DGDialogAnimatorTests-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-DGDialogAnimatorTests-iOS-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1023A4B2D80DC6DA5931C64D796E9CCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9346C2A0AD653D03E9A8AB0264AA026 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93458CDDF46451B62043EC67FE177C64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8F7AA7C0A1C37EBDDE488294069AFF0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A40217A1024905B1843CD57164BDD1AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3318DEAED815359455D7F3824764B62A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1F2CFA80170E779EB5A953BDB7818A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CFB8590DE8A98100CB80BADEF6E9AD1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDABB71EB0EE108F8E361F7244932207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480812E5BBA59E3939A70CA130146EEA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDD53F772D648722242B9CDF5AC46D2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C7B6ED9EA6F524AC0E7C35DC9472636 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26F6706ADE574F8BCA7DFE11FF06EE66 /* Pods-Samples-DGDialogAnimatorSample-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BEE53EB3A3FFAC271C0D2C977023B444 /* Info.plist */,
+				DA3889A21F2E6BF3209ADB8ED1478C4A /* Pods-Samples-DGDialogAnimatorSample-iOS.modulemap */,
+				9BDC23A27750846570B7433294ADEFD6 /* Pods-Samples-DGDialogAnimatorSample-iOS-acknowledgements.markdown */,
+				E90C35C204875A6C0B0BC6BD11691FBC /* Pods-Samples-DGDialogAnimatorSample-iOS-acknowledgements.plist */,
+				801EAF2FD013F038B279200592932A69 /* Pods-Samples-DGDialogAnimatorSample-iOS-dummy.m */,
+				F5A7BFC6AC5BAF8B1BED6120D85317EE /* Pods-Samples-DGDialogAnimatorSample-iOS-frameworks.sh */,
+				B6D27D83466E9A2F5FBC329E4E96783E /* Pods-Samples-DGDialogAnimatorSample-iOS-resources.sh */,
+				DB53F0BB26FE8AD588E65FD958D1AD0F /* Pods-Samples-DGDialogAnimatorSample-iOS-umbrella.h */,
+				081EB11F7F7B8AA371C07141E9400221 /* Pods-Samples-DGDialogAnimatorSample-iOS.debug.xcconfig */,
+				148F5BBC8B86C2A95DE1C8F19F44CDB2 /* Pods-Samples-DGDialogAnimatorSample-iOS.release.xcconfig */,
+			);
+			name = "Pods-Samples-DGDialogAnimatorSample-iOS";
+			path = "Target Support Files/Pods-Samples-DGDialogAnimatorSample-iOS";
+			sourceTree = "<group>";
+		};
+		40E69F54529E0CEE3EFB3A6D66970E1D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5AD2D91D5034693922CA11801E1FB16D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADBBBFCE18B5841640FDF8AE6E0B04A9 /* Pods-Frameworks-DGDialogAnimator-iOS */,
+				B7B20B6CFD631A4B0EFD64C85ADCD664 /* Pods-Frameworks-DGDialogAnimator-tvOS */,
+				26F6706ADE574F8BCA7DFE11FF06EE66 /* Pods-Samples-DGDialogAnimatorSample-iOS */,
+				8DC440CE5E5E90C3B27D2F56150548DA /* Pods-Samples-DGDialogAnimatorSample-tvOS */,
+				89F83AE2B3C5EA54D645D0C2A9EFDB09 /* Pods-Tests-DGDialogAnimatorTests-iOS */,
+				B52FDEEE4C4397583E57CC55E831D136 /* Pods-Tests-DGDialogAnimatorTests-tvOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		62583236BE17C3D7A8CDD90C7BFE79C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A053109093283A8334B23DC7AA87D6D0 /* Pods_Frameworks_DGDialogAnimator_iOS.framework */,
+				10F332A4143CD894C946DFD3C33C1687 /* Pods_Frameworks_DGDialogAnimator_tvOS.framework */,
+				F13AAEB68EDE9988AB99BB6778A58EF3 /* Pods_Samples_DGDialogAnimatorSample_iOS.framework */,
+				4A65EA929EDFE13CF5DD0E42E609C9D4 /* Pods_Samples_DGDialogAnimatorSample_tvOS.framework */,
+				11679F591737231E44B54A5974D26102 /* Pods_Tests_DGDialogAnimatorTests_iOS.framework */,
+				F6DE7EDD82F7D0D3B4F8C6D5F50BA6B3 /* Pods_Tests_DGDialogAnimatorTests_tvOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A42F72DC1D780481325DD00969B19BB6 /* Frameworks */,
+				62583236BE17C3D7A8CDD90C7BFE79C9 /* Products */,
+				5AD2D91D5034693922CA11801E1FB16D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		89F83AE2B3C5EA54D645D0C2A9EFDB09 /* Pods-Tests-DGDialogAnimatorTests-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7D6485B17017E7A84A9C024AFBFC5F06 /* Info.plist */,
+				A8106DF46A0CD1C6DEE53783B253608A /* Pods-Tests-DGDialogAnimatorTests-iOS.modulemap */,
+				6B5087E7A5028A29C406F9869DD47AF1 /* Pods-Tests-DGDialogAnimatorTests-iOS-acknowledgements.markdown */,
+				C934DA293DEE2223C99C8D7926009781 /* Pods-Tests-DGDialogAnimatorTests-iOS-acknowledgements.plist */,
+				47966104152F461492268B0302D5A989 /* Pods-Tests-DGDialogAnimatorTests-iOS-dummy.m */,
+				346E2EC7211366DFDFA5CA7E7BA4E436 /* Pods-Tests-DGDialogAnimatorTests-iOS-frameworks.sh */,
+				F3D7FCA32241D6317B44FF3B5EA59912 /* Pods-Tests-DGDialogAnimatorTests-iOS-resources.sh */,
+				FCF64E2116914F1D9745FC556EEDFAD2 /* Pods-Tests-DGDialogAnimatorTests-iOS-umbrella.h */,
+				CFC4F89AB5372F7E5F0A70A1375DCE9A /* Pods-Tests-DGDialogAnimatorTests-iOS.debug.xcconfig */,
+				A09F4A1E3DCEB239E64358AE5B06AC9F /* Pods-Tests-DGDialogAnimatorTests-iOS.release.xcconfig */,
+			);
+			name = "Pods-Tests-DGDialogAnimatorTests-iOS";
+			path = "Target Support Files/Pods-Tests-DGDialogAnimatorTests-iOS";
+			sourceTree = "<group>";
+		};
+		8DC440CE5E5E90C3B27D2F56150548DA /* Pods-Samples-DGDialogAnimatorSample-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				C8649A4B78D7630712601A12DE7A85F8 /* Info.plist */,
+				7B6FC64EE5F1B05F85F4E24876475156 /* Pods-Samples-DGDialogAnimatorSample-tvOS.modulemap */,
+				0F1DBBED498E11B72CCFDC4517D5AF9D /* Pods-Samples-DGDialogAnimatorSample-tvOS-acknowledgements.markdown */,
+				66084CBA7B9A8C64F7A85F6A3C997F04 /* Pods-Samples-DGDialogAnimatorSample-tvOS-acknowledgements.plist */,
+				C6AD1C88BFB826EDCA3F43AD87A9F966 /* Pods-Samples-DGDialogAnimatorSample-tvOS-dummy.m */,
+				4D46FA7ECA1659E6AC8AD5CE5357E7DB /* Pods-Samples-DGDialogAnimatorSample-tvOS-frameworks.sh */,
+				4E1DC490969FA9B4BD03F84C95CCED04 /* Pods-Samples-DGDialogAnimatorSample-tvOS-resources.sh */,
+				9EF178CE289F01DA834CD24A4C91CE32 /* Pods-Samples-DGDialogAnimatorSample-tvOS-umbrella.h */,
+				60C38238FA859394BB74525AB3EE067B /* Pods-Samples-DGDialogAnimatorSample-tvOS.debug.xcconfig */,
+				21878E0DA6CFDA11B464A33E486DC54A /* Pods-Samples-DGDialogAnimatorSample-tvOS.release.xcconfig */,
+			);
+			name = "Pods-Samples-DGDialogAnimatorSample-tvOS";
+			path = "Target Support Files/Pods-Samples-DGDialogAnimatorSample-tvOS";
+			sourceTree = "<group>";
+		};
+		A42F72DC1D780481325DD00969B19BB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40E69F54529E0CEE3EFB3A6D66970E1D /* iOS */,
+				B95AAC6DF73A3AFC4B77A363C70E8A09 /* tvOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADBBBFCE18B5841640FDF8AE6E0B04A9 /* Pods-Frameworks-DGDialogAnimator-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				36AFC34469DB78593C4B099C51FE6AB2 /* Info.plist */,
+				AAFBAA8D9E4C4EE9C5031122D0AC1948 /* Pods-Frameworks-DGDialogAnimator-iOS.modulemap */,
+				B40A947B7D6E06F9D12D37EC3CB8307D /* Pods-Frameworks-DGDialogAnimator-iOS-acknowledgements.markdown */,
+				4AD12C983EFBF3C311BCAEFDC05637EB /* Pods-Frameworks-DGDialogAnimator-iOS-acknowledgements.plist */,
+				EDB2FF5A2CA600C702EC943D8586298D /* Pods-Frameworks-DGDialogAnimator-iOS-dummy.m */,
+				4F74897C3CCE20AB818FDAA36189050B /* Pods-Frameworks-DGDialogAnimator-iOS-resources.sh */,
+				A8391B0CF66F3D1A0548491FF49B625D /* Pods-Frameworks-DGDialogAnimator-iOS-umbrella.h */,
+				3C79D9A55A47AC5B599005689D08082A /* Pods-Frameworks-DGDialogAnimator-iOS.debug.xcconfig */,
+				5AE96ADF513C0CFD8F51B0E9CF8E710B /* Pods-Frameworks-DGDialogAnimator-iOS.release.xcconfig */,
+			);
+			name = "Pods-Frameworks-DGDialogAnimator-iOS";
+			path = "Target Support Files/Pods-Frameworks-DGDialogAnimator-iOS";
+			sourceTree = "<group>";
+		};
+		B52FDEEE4C4397583E57CC55E831D136 /* Pods-Tests-DGDialogAnimatorTests-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				76FF63FED14DA55BC499EDF6CF25BECA /* Info.plist */,
+				F53F92ED85A7EA52DE7DDD921150DA59 /* Pods-Tests-DGDialogAnimatorTests-tvOS.modulemap */,
+				E49DCA20829A435B084F434E3C735F0E /* Pods-Tests-DGDialogAnimatorTests-tvOS-acknowledgements.markdown */,
+				BFE5DA811A248C9D94D31F8DE1A68100 /* Pods-Tests-DGDialogAnimatorTests-tvOS-acknowledgements.plist */,
+				5425A1B30F8B2BAC6A0AE5C972914F5A /* Pods-Tests-DGDialogAnimatorTests-tvOS-dummy.m */,
+				A91CE39A31542EA846EAB1C858DDCD9E /* Pods-Tests-DGDialogAnimatorTests-tvOS-frameworks.sh */,
+				C9245AF365CC44EBB529ADC823150584 /* Pods-Tests-DGDialogAnimatorTests-tvOS-resources.sh */,
+				5B15AF70EE656AEFCF4B5A2D44A39908 /* Pods-Tests-DGDialogAnimatorTests-tvOS-umbrella.h */,
+				96894C3E3B9DFD1E2AAEFF2083FFC6D0 /* Pods-Tests-DGDialogAnimatorTests-tvOS.debug.xcconfig */,
+				5A6A14D509168853436AC442621B9F54 /* Pods-Tests-DGDialogAnimatorTests-tvOS.release.xcconfig */,
+			);
+			name = "Pods-Tests-DGDialogAnimatorTests-tvOS";
+			path = "Target Support Files/Pods-Tests-DGDialogAnimatorTests-tvOS";
+			sourceTree = "<group>";
+		};
+		B7B20B6CFD631A4B0EFD64C85ADCD664 /* Pods-Frameworks-DGDialogAnimator-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				517C0CB5F48D44E0ABA011708CEE0334 /* Info.plist */,
+				D7426B238F66F6D432226F33084E1868 /* Pods-Frameworks-DGDialogAnimator-tvOS.modulemap */,
+				18AD8A7E008EF97CE687F1BAACAA7953 /* Pods-Frameworks-DGDialogAnimator-tvOS-acknowledgements.markdown */,
+				5D3FA106F4F57DCEE615797E6AC2E33F /* Pods-Frameworks-DGDialogAnimator-tvOS-acknowledgements.plist */,
+				6F1EEE98C4C879EEFAFFE44A26C46110 /* Pods-Frameworks-DGDialogAnimator-tvOS-dummy.m */,
+				9D166C1268E85635F05415CA58B6AA2F /* Pods-Frameworks-DGDialogAnimator-tvOS-resources.sh */,
+				45610B76F66AE43457810461F7B4BCB0 /* Pods-Frameworks-DGDialogAnimator-tvOS-umbrella.h */,
+				036C7255B26479DA346D340524C5917B /* Pods-Frameworks-DGDialogAnimator-tvOS.debug.xcconfig */,
+				B76DB3F62B5E53BCDD1F118C22945A5C /* Pods-Frameworks-DGDialogAnimator-tvOS.release.xcconfig */,
+			);
+			name = "Pods-Frameworks-DGDialogAnimator-tvOS";
+			path = "Target Support Files/Pods-Frameworks-DGDialogAnimator-tvOS";
+			sourceTree = "<group>";
+		};
+		B95AAC6DF73A3AFC4B77A363C70E8A09 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		080276237A1E371BD7EBB293DB2DE554 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34568D5BEC31247B0F36A7CBDCABF6C /* Pods-Frameworks-DGDialogAnimator-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50FDE1A863ECC12A995F021922BD8FDE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C516CABDF5FA1CD4614F0C4FD5227CE /* Pods-Tests-DGDialogAnimatorTests-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AF441D9FF3B1F320C8A163CDBA41AFD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB8718E8114931831BC5506271EEFDED /* Pods-Samples-DGDialogAnimatorSample-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7906719B8BB37E32EAC7D9A69992012C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98C3F3C3A077CBEE018B952F62C38DA0 /* Pods-Samples-DGDialogAnimatorSample-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB76A0BBC82F43BE9803DE8E9785464 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				307B31E9AEBE931184319514A38EFBEB /* Pods-Tests-DGDialogAnimatorTests-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E27ECECDC5A3BA9A96827A573F497A69 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE72FCF7D045F252BA005E46B841B071 /* Pods-Frameworks-DGDialogAnimator-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		091132BDCF6D1E2451994A9D4D68106F /* Pods-Samples-DGDialogAnimatorSample-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05F1CEE41278CF4B681DB1160F4A4415 /* Build configuration list for PBXNativeTarget "Pods-Samples-DGDialogAnimatorSample-iOS" */;
+			buildPhases = (
+				8557D26F2AE6CE48DAC0AF3E891D8178 /* Sources */,
+				93458CDDF46451B62043EC67FE177C64 /* Frameworks */,
+				7906719B8BB37E32EAC7D9A69992012C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Samples-DGDialogAnimatorSample-iOS";
+			productName = "Pods-Samples-DGDialogAnimatorSample-iOS";
+			productReference = F13AAEB68EDE9988AB99BB6778A58EF3 /* Pods_Samples_DGDialogAnimatorSample_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1D98B0F04E416EB02CA2125FC81C05AE /* Pods-Frameworks-DGDialogAnimator-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A2E9DE82A88D64C4289C242264C5B0E /* Build configuration list for PBXNativeTarget "Pods-Frameworks-DGDialogAnimator-iOS" */;
+			buildPhases = (
+				1995529009C80E49509678387813C3BC /* Sources */,
+				A40217A1024905B1843CD57164BDD1AE /* Frameworks */,
+				E27ECECDC5A3BA9A96827A573F497A69 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Frameworks-DGDialogAnimator-iOS";
+			productName = "Pods-Frameworks-DGDialogAnimator-iOS";
+			productReference = A053109093283A8334B23DC7AA87D6D0 /* Pods_Frameworks_DGDialogAnimator_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		40EEC236EEFDC52DAF0BF80BD83EBE04 /* Pods-Frameworks-DGDialogAnimator-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1250CF286DEE2A7CDA66D8E1FE21F33E /* Build configuration list for PBXNativeTarget "Pods-Frameworks-DGDialogAnimator-tvOS" */;
+			buildPhases = (
+				43C89216E135F0091BD0E05655854501 /* Sources */,
+				CA1F2CFA80170E779EB5A953BDB7818A /* Frameworks */,
+				080276237A1E371BD7EBB293DB2DE554 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Frameworks-DGDialogAnimator-tvOS";
+			productName = "Pods-Frameworks-DGDialogAnimator-tvOS";
+			productReference = 10F332A4143CD894C946DFD3C33C1687 /* Pods_Frameworks_DGDialogAnimator_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5D20DB213828FD20522AB4D8B2874CF4 /* Pods-Samples-DGDialogAnimatorSample-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26952D31C287B4C030476ABFB411B630 /* Build configuration list for PBXNativeTarget "Pods-Samples-DGDialogAnimatorSample-tvOS" */;
+			buildPhases = (
+				1385B1B363AE24F6AD317E98E2BBAD31 /* Sources */,
+				CDABB71EB0EE108F8E361F7244932207 /* Frameworks */,
+				5AF441D9FF3B1F320C8A163CDBA41AFD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Samples-DGDialogAnimatorSample-tvOS";
+			productName = "Pods-Samples-DGDialogAnimatorSample-tvOS";
+			productReference = 4A65EA929EDFE13CF5DD0E42E609C9D4 /* Pods_Samples_DGDialogAnimatorSample_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		79221289959FBB9324056AD0ED551737 /* Pods-Tests-DGDialogAnimatorTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D74B1F9C02F627E85A9C6C61058C0C24 /* Build configuration list for PBXNativeTarget "Pods-Tests-DGDialogAnimatorTests-tvOS" */;
+			buildPhases = (
+				0A9C5236B0C6FA56945955FCFAD00276 /* Sources */,
+				1023A4B2D80DC6DA5931C64D796E9CCC /* Frameworks */,
+				9AB76A0BBC82F43BE9803DE8E9785464 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-DGDialogAnimatorTests-tvOS";
+			productName = "Pods-Tests-DGDialogAnimatorTests-tvOS";
+			productReference = F6DE7EDD82F7D0D3B4F8C6D5F50BA6B3 /* Pods_Tests_DGDialogAnimatorTests_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7FDD7D8AB283E02747D1E2DA1DB4399D /* Pods-Tests-DGDialogAnimatorTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D228F088AEC282A5E8770BFEB5FCB152 /* Build configuration list for PBXNativeTarget "Pods-Tests-DGDialogAnimatorTests-iOS" */;
+			buildPhases = (
+				AA9F999DAA3BA53794731C2CCBAF6746 /* Sources */,
+				CDD53F772D648722242B9CDF5AC46D2A /* Frameworks */,
+				50FDE1A863ECC12A995F021922BD8FDE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-DGDialogAnimatorTests-iOS";
+			productName = "Pods-Tests-DGDialogAnimatorTests-iOS";
+			productReference = 11679F591737231E44B54A5974D26102 /* Pods_Tests_DGDialogAnimatorTests_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 62583236BE17C3D7A8CDD90C7BFE79C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D98B0F04E416EB02CA2125FC81C05AE /* Pods-Frameworks-DGDialogAnimator-iOS */,
+				40EEC236EEFDC52DAF0BF80BD83EBE04 /* Pods-Frameworks-DGDialogAnimator-tvOS */,
+				091132BDCF6D1E2451994A9D4D68106F /* Pods-Samples-DGDialogAnimatorSample-iOS */,
+				5D20DB213828FD20522AB4D8B2874CF4 /* Pods-Samples-DGDialogAnimatorSample-tvOS */,
+				7FDD7D8AB283E02747D1E2DA1DB4399D /* Pods-Tests-DGDialogAnimatorTests-iOS */,
+				79221289959FBB9324056AD0ED551737 /* Pods-Tests-DGDialogAnimatorTests-tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A9C5236B0C6FA56945955FCFAD00276 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE65FA88E759C4046143AA0E87016A28 /* Pods-Tests-DGDialogAnimatorTests-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1385B1B363AE24F6AD317E98E2BBAD31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D536C54ECB3DB2D0D6EFBC59E6C15E /* Pods-Samples-DGDialogAnimatorSample-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1995529009C80E49509678387813C3BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEEFF03BD49A5E499821874F3C7FDD4 /* Pods-Frameworks-DGDialogAnimator-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C89216E135F0091BD0E05655854501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B020B92DCADC4BD007F9F09F8EB86C /* Pods-Frameworks-DGDialogAnimator-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8557D26F2AE6CE48DAC0AF3E891D8178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC4A089DEB4B33D7705DD4FFFF94999 /* Pods-Samples-DGDialogAnimatorSample-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA9F999DAA3BA53794731C2CCBAF6746 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657FCBA922F620291051D20B3E24321F /* Pods-Tests-DGDialogAnimatorTests-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		00BAF93A453BB4082B0586C5F6070AE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 148F5BBC8B86C2A95DE1C8F19F44CDB2 /* Pods-Samples-DGDialogAnimatorSample-iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Samples-DGDialogAnimatorSample-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Samples-DGDialogAnimatorSample-iOS/Pods-Samples-DGDialogAnimatorSample-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Samples_DGDialogAnimatorSample_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		01A66E162E6B6FBF48A5881590413751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A6A14D509168853436AC442621B9F54 /* Pods-Tests-DGDialogAnimatorTests-tvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests-DGDialogAnimatorTests-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests-DGDialogAnimatorTests-tvOS/Pods-Tests-DGDialogAnimatorTests-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tests_DGDialogAnimatorTests_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1719513535592250F9BED91359B7B6C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60C38238FA859394BB74525AB3EE067B /* Pods-Samples-DGDialogAnimatorSample-tvOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Samples-DGDialogAnimatorSample-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Samples-DGDialogAnimatorSample-tvOS/Pods-Samples-DGDialogAnimatorSample-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Samples_DGDialogAnimatorSample_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1F010146A4AA8E40B8D54A31D066186F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33F0A84971A039FAA55FC427F255A81D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C79D9A55A47AC5B599005689D08082A /* Pods-Frameworks-DGDialogAnimator-iOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Frameworks-DGDialogAnimator-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Frameworks-DGDialogAnimator-iOS/Pods-Frameworks-DGDialogAnimator-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Frameworks_DGDialogAnimator_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		34D5FE4E3ECA9CAD8BDD19DACD66FA8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A09F4A1E3DCEB239E64358AE5B06AC9F /* Pods-Tests-DGDialogAnimatorTests-iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests-DGDialogAnimatorTests-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests-DGDialogAnimatorTests-iOS/Pods-Tests-DGDialogAnimatorTests-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tests_DGDialogAnimatorTests_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		650D0170CEC0F566F7F14F65BBA36CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AE96ADF513C0CFD8F51B0E9CF8E710B /* Pods-Frameworks-DGDialogAnimator-iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Frameworks-DGDialogAnimator-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Frameworks-DGDialogAnimator-iOS/Pods-Frameworks-DGDialogAnimator-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Frameworks_DGDialogAnimator_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		69F8960444932D5152AB483681B4971C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		6B0BC5ACEFF4C702846C695E75B945AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 036C7255B26479DA346D340524C5917B /* Pods-Frameworks-DGDialogAnimator-tvOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Frameworks-DGDialogAnimator-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Frameworks-DGDialogAnimator-tvOS/Pods-Frameworks-DGDialogAnimator-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Frameworks_DGDialogAnimator_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7C2BAC0168B7B752D22113D5F557506A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 081EB11F7F7B8AA371C07141E9400221 /* Pods-Samples-DGDialogAnimatorSample-iOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Samples-DGDialogAnimatorSample-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Samples-DGDialogAnimatorSample-iOS/Pods-Samples-DGDialogAnimatorSample-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Samples_DGDialogAnimatorSample_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8256E05118A3DCACB173FF7D91E75508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B76DB3F62B5E53BCDD1F118C22945A5C /* Pods-Frameworks-DGDialogAnimator-tvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Frameworks-DGDialogAnimator-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Frameworks-DGDialogAnimator-tvOS/Pods-Frameworks-DGDialogAnimator-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Frameworks_DGDialogAnimator_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AB5F4E5FECC47C02F13E3442F3D32C0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96894C3E3B9DFD1E2AAEFF2083FFC6D0 /* Pods-Tests-DGDialogAnimatorTests-tvOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests-DGDialogAnimatorTests-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests-DGDialogAnimatorTests-tvOS/Pods-Tests-DGDialogAnimatorTests-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tests_DGDialogAnimatorTests_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CB7FC8AF45B91BBD1A73217C26D76048 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFC4F89AB5372F7E5F0A70A1375DCE9A /* Pods-Tests-DGDialogAnimatorTests-iOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests-DGDialogAnimatorTests-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests-DGDialogAnimatorTests-iOS/Pods-Tests-DGDialogAnimatorTests-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tests_DGDialogAnimatorTests_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FBD22E0CA768AC3A0A485CEC82ECFF56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21878E0DA6CFDA11B464A33E486DC54A /* Pods-Samples-DGDialogAnimatorSample-tvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Samples-DGDialogAnimatorSample-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Samples-DGDialogAnimatorSample-tvOS/Pods-Samples-DGDialogAnimatorSample-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Samples_DGDialogAnimatorSample_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05F1CEE41278CF4B681DB1160F4A4415 /* Build configuration list for PBXNativeTarget "Pods-Samples-DGDialogAnimatorSample-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C2BAC0168B7B752D22113D5F557506A /* Debug */,
+				00BAF93A453BB4082B0586C5F6070AE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1250CF286DEE2A7CDA66D8E1FE21F33E /* Build configuration list for PBXNativeTarget "Pods-Frameworks-DGDialogAnimator-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B0BC5ACEFF4C702846C695E75B945AA /* Debug */,
+				8256E05118A3DCACB173FF7D91E75508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26952D31C287B4C030476ABFB411B630 /* Build configuration list for PBXNativeTarget "Pods-Samples-DGDialogAnimatorSample-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1719513535592250F9BED91359B7B6C0 /* Debug */,
+				FBD22E0CA768AC3A0A485CEC82ECFF56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69F8960444932D5152AB483681B4971C /* Debug */,
+				1F010146A4AA8E40B8D54A31D066186F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A2E9DE82A88D64C4289C242264C5B0E /* Build configuration list for PBXNativeTarget "Pods-Frameworks-DGDialogAnimator-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F0A84971A039FAA55FC427F255A81D /* Debug */,
+				650D0170CEC0F566F7F14F65BBA36CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D228F088AEC282A5E8770BFEB5FCB152 /* Build configuration list for PBXNativeTarget "Pods-Tests-DGDialogAnimatorTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB7FC8AF45B91BBD1A73217C26D76048 /* Debug */,
+				34D5FE4E3ECA9CAD8BDD19DACD66FA8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D74B1F9C02F627E85A9C6C61058C0C24 /* Build configuration list for PBXNativeTarget "Pods-Tests-DGDialogAnimatorTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5F4E5FECC47C02F13E3442F3D32C0D /* Debug */,
+				01A66E162E6B6FBF48A5881590413751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
