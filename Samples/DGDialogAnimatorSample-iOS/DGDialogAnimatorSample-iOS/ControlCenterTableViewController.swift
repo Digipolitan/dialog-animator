@@ -55,7 +55,7 @@ class ControlCenterViewController: UIViewController {
 				                                alpha: 1)
 
 				toast.label.text = "Congratulations! You succeeded in something!"
-                DGDialogAnimator.default.animate(view: toast, with: options, path: DGDialogAnimator.AnimationPath(initial: .top, intermediate: .center, final: .bottom))
+                DGDialogAnimator.default.animate(view: toast, with: options, path: DGDialogAnimator.AnimationPath(initial: .top, intermediate: .top))
 			},
 			IndexPath(row: 1, section: 0): { _ in
                 var options = DGDialogAnimator.Options()

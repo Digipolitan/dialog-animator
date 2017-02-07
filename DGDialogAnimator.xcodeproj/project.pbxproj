@@ -19,6 +19,7 @@
 		A3BEFEC71E48D07400706936 /* DialogWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEFEC51E48D07400706936 /* DialogWindow.swift */; };
 		A3BEFEC91E48D12D00706936 /* DialogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEFEC81E48D12D00706936 /* DialogInfo.swift */; };
 		A3BEFECA1E48D12D00706936 /* DialogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEFEC81E48D12D00706936 /* DialogInfo.swift */; };
+		A3F1CB641E49CDF2000468F2 /* DGDialogAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE667FDE1E2FAEE0007A401B /* DGDialogAnimator.swift */; };
 		AE667FDF1E2FAEE0007A401B /* DGDialogAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE667FDE1E2FAEE0007A401B /* DGDialogAnimator.swift */; };
 		B3F8B2FE9915AA444D8C6D45 /* Pods_Frameworks_DGDialogAnimator_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3580F26DE22E1E33B431715 /* Pods_Frameworks_DGDialogAnimator_iOS.framework */; };
 		D8F60E6EB4AFFE0A297ADE44 /* Pods_Frameworks_DGDialogAnimator_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262BD19E0FD8BDA09E1DC127 /* Pods_Frameworks_DGDialogAnimator_tvOS.framework */; };
@@ -583,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F1CB641E49CDF2000468F2 /* DGDialogAnimator.swift in Sources */,
 				A3BEFECA1E48D12D00706936 /* DialogInfo.swift in Sources */,
 				A3BEFEC71E48D07400706936 /* DialogWindow.swift in Sources */,
 			);
