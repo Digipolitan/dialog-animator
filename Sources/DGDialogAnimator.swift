@@ -116,12 +116,16 @@ open class DGDialogAnimator {
     private var topLevelContainer: UIView?
 
     public init() {
-        NotificationCenter.default.addObserver(self, selector: #selector(updateFrameIsAnimating), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        #if os(iOS)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateFrameWithOrientation), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        #endif
     }
 
+    #if os(iOS)
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
+    #endif
 
     @objc
     public func dismiss() {
@@ -161,13 +165,15 @@ open class DGDialogAnimator {
         self.dismiss()
     }
 
+    #if os(iOS)
     @objc
-    fileprivate func updateFrameIsAnimating() {
+    fileprivate func updateFrameWithOrientation() {
         guard let dialogInfo = self.dialogInfo else {
             return
         }
         dialogInfo.dialog.frame.origin = dialogInfo.intermediatePoint
     }
+    #endif
 
     public func animate(view: UIView, in container: UIView? = nil, with options: Options? = nil, path: AnimationPath, completion: ((Void) -> (Void))? = nil) {
         guard self.dialogInfo == nil else {
@@ -210,7 +216,7 @@ open class DGDialogAnimator {
         if coverStatusBar {
             if self.topLevelContainer == nil {
                 let window = DialogWindow()
-                window.windowLevel = UIWindowLevelStatusBar + 1
+                window.windowLevel = UIWindowLevelAlert
                 window.rootViewController = UIViewController()
                 self.topLevelContainer = window
             }
