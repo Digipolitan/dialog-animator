@@ -12,7 +12,7 @@ import DGDialogAnimator
 class ControlCenterViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 
-	var actions: [IndexPath: (Void) -> (Void)] = [:]
+	var actions: [IndexPath: () -> Void] = [:]
 	var confirmAlertController = ConfirmAlertController()
 	var yesNoAlertController = YesNoAlertController()
 	var intputAlertController = InputAlertController()
@@ -36,7 +36,7 @@ class ControlCenterViewController: UIViewController {
 		self.tableView.dataSource = self
 
 		self.actions = [
-			IndexPath(row: 0, section: 0): { _ in
+			IndexPath(row: 0, section: 0): {
                 var options = DGDialogAnimator.Options()
 				options.hold = false
 				options.dismissDelay = 5
@@ -49,7 +49,7 @@ class ControlCenterViewController: UIViewController {
 				}
 
 				toast.frame.size = CGSize(width: self.view.bounds.width, height: 50)
-				toast.backgroundColor = UIColor(colorLiteralRed: 185/255,
+				toast.backgroundColor = UIColor(red: 185/255,
 				                                green: 200/255,
 				                                blue: 162/255,
 				                                alpha: 1)
@@ -57,7 +57,7 @@ class ControlCenterViewController: UIViewController {
 				toast.label.text = "Congratulations! You succeeded in something!"
                 DGDialogAnimator.default.animate(view: toast, with: options, path: DGDialogAnimator.AnimationPath(initial: .top, intermediate: .top))
 			},
-			IndexPath(row: 1, section: 0): { _ in
+			IndexPath(row: 1, section: 0): {
                 var options = DGDialogAnimator.Options()
 				options.hold = false
 				options.backdrop = false
@@ -68,14 +68,14 @@ class ControlCenterViewController: UIViewController {
 				}
 
 				toast.frame.size = CGSize(width: self.view.bounds.width, height: 50)
-				toast.backgroundColor = UIColor(colorLiteralRed: 225/255,
+				toast.backgroundColor = UIColor(red: 225/255,
 				                                green: 109/255,
 				                                blue: 91/255,
 				                                alpha: 1)
 				toast.label.text = "Error during the thing you tried to do."
                 DGDialogAnimator.default.animate(view: toast, in: self.view, with: options, path: DGDialogAnimator.AnimationPath(initial: .top, intermediate: .top))
 			},
-			IndexPath(row: 2, section: 0): { _ in
+			IndexPath(row: 2, section: 0): {
                 var options = DGDialogAnimator.Options()
                 options.hold = false
 				options.backdrop = false
@@ -86,14 +86,14 @@ class ControlCenterViewController: UIViewController {
 				}
 
 				toast.frame.size = CGSize(width: self.view.bounds.width, height: 50)
-				toast.backgroundColor = UIColor(colorLiteralRed: 151/255,
+				toast.backgroundColor = UIColor(red: 151/255,
 				                                green: 186/255,
 				                                blue: 232/255,
 				                                alpha: 1)
 				toast.label.text = "You received a new message. Check your inbox"
                 DGDialogAnimator.default.animate(view: toast, in: self.view, with: options, path: DGDialogAnimator.AnimationPath(initial: .top, intermediate: .top))
 			},
-			IndexPath(row: 3, section: 0): { _ in
+			IndexPath(row: 3, section: 0): {
                 var options = DGDialogAnimator.Options()
                 options.hold = false
 				options.backdrop = false
@@ -104,14 +104,14 @@ class ControlCenterViewController: UIViewController {
 				}
 
 				toast.frame.size = CGSize(width: self.view.bounds.width, height: 50)
-				toast.backgroundColor = UIColor(colorLiteralRed: 240/255,
+				toast.backgroundColor = UIColor(red: 240/255,
 				                                green: 221/255,
 				                                blue: 130/255,
 				                                alpha: 1)
 				toast.label.text = "Disconnected from the server. Modifications won't be saved"
                 DGDialogAnimator.default.animate(view: toast, in: self.view, with: options, path: DGDialogAnimator.AnimationPath(initial: .top, intermediate: .top))
 			},
-			IndexPath(row: 0, section: 1): { _ in
+			IndexPath(row: 0, section: 1): {
                 var options = DGDialogAnimator.Options()
                 options.hold = true
 				options.blurEffectStyle = nil
@@ -123,7 +123,7 @@ class ControlCenterViewController: UIViewController {
 					self.tableView.isScrollEnabled = true
 				}
 			},
-			IndexPath(row: 1, section: 1): { _ in
+			IndexPath(row: 1, section: 1): {
                 var options = DGDialogAnimator.Options()
                 options.hold = true
 				options.blurEffectStyle = nil
@@ -134,7 +134,7 @@ class ControlCenterViewController: UIViewController {
 					self.tableView.isScrollEnabled = true
 				}
 			},
-			IndexPath(row: 2, section: 1): { _ in
+			IndexPath(row: 2, section: 1): {
                 var options = DGDialogAnimator.Options()
                 options.hold = true
 				options.blurEffectStyle = nil
@@ -145,7 +145,7 @@ class ControlCenterViewController: UIViewController {
 					self.tableView.isScrollEnabled = true
 				}
 			},
-			IndexPath(row: 0, section: 2): { _ in
+			IndexPath(row: 0, section: 2): {
                 var options = DGDialogAnimator.Options()
                 options.hold = true
 				options.backdrop = true

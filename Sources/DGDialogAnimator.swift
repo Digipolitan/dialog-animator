@@ -22,9 +22,9 @@ open class DGDialogAnimator {
 
         public static let top = Position(rawValue: 1 << 0)
         public static let right = Position(rawValue: 1 << 1)
-        public static let bottom	= Position(rawValue: 1 << 2)
+        public static let bottom = Position(rawValue: 1 << 2)
         public static let left = Position(rawValue: 1 << 3)
-        public static let center	= Position(rawValue: 1 << 4)
+        public static let center = Position(rawValue: 1 << 4)
     }
 
     public struct AnimationPath {
@@ -143,7 +143,7 @@ open class DGDialogAnimator {
                        animations: {
                         dialogInfo.dialog.frame.origin = dialogInfo.finalPoint
                         dialogInfo.background?.alpha = 0
-        }) { _ in
+        }, completion: { _ in
             dialogInfo.background?.removeFromSuperview()
             dialogInfo.dialog.removeFromSuperview()
             if dialogInfo.container == self.topLevelContainer {
@@ -151,7 +151,7 @@ open class DGDialogAnimator {
             }
             dialogInfo.completion?()
             self.dialogInfo = nil
-        }
+        })
     }
 
     @objc
@@ -175,7 +175,7 @@ open class DGDialogAnimator {
     }
     #endif
 
-    public func animate(view: UIView, in container: UIView? = nil, with options: Options? = nil, path: AnimationPath, completion: ((Void) -> (Void))? = nil) {
+    public func animate(view: UIView, in container: UIView? = nil, with options: Options? = nil, path: AnimationPath, completion: (() -> Void)? = nil) {
         guard self.dialogInfo == nil else {
             return
         }
@@ -203,13 +203,13 @@ open class DGDialogAnimator {
                        animations: {
                         background?.alpha = 1
                         view.frame.origin = dialogInfo.intermediatePoint
-        }) { _ in
+        }, completion: { _ in
             if self.dialogInfo != nil {
                 if !dialogOptions.hold {
                     self.dialogInfo!.leaveTimer = Timer.scheduledTimer(timeInterval: dialogOptions.dismissDelay, target: self, selector: #selector(self.dismiss), userInfo: nil, repeats: false)
                 }
             }
-        }
+        })
     }
 
     private func defaultContainer(coverStatusBar: Bool = false) -> UIView? {

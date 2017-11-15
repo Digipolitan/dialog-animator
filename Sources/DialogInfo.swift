@@ -20,7 +20,7 @@ struct DialogInfo {
 
     public var leaveTimer: Timer?
 
-    public var completion: ((Void) -> (Void))?
+    public var completion: (() -> Void)?
 
     public init(dialog: UIView, container: UIView, background: UIView?, path: DGDialogAnimator.AnimationPath, options: DGDialogAnimator.Options) {
         self.dialog = dialog
@@ -35,7 +35,7 @@ struct DialogInfo {
     }
 
     public var intermediatePoint: CGPoint {
-        return DialogInfo.finalCoordinates(for:self.dialog, in: self.container, from: self.path.intermediatePosition)
+        return DialogInfo.finalCoordinates(for: self.dialog, in: self.container, from: self.path.intermediatePosition)
     }
 
     public var finalPoint: CGPoint {

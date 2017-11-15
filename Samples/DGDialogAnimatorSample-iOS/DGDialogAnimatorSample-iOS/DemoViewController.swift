@@ -27,7 +27,7 @@ class DemoViewController: UIViewController {
     }
 
 	@IBAction func didTouchShow(_ sender: Any) {
-		print("self.options: \(self.options)")
+        print("self.options: \(String(describing: self.options))")
 		let container: UIView? = (self.options?.coverStatusBar ?? false) ? nil : self.view
         DGDialogAnimator.default.animate(view: self.toast, in: container, with: self.options, path: DGDialogAnimator.AnimationPath(initial: from!, intermediate: to!))
 	}

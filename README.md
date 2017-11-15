@@ -1,6 +1,7 @@
 DGDialogAnimator
 ================
 
+[![Swift Version](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Build Status](https://travis-ci.org/Digipolitan/dialog-animator-swift.svg?branch=master)](https://travis-ci.org/Digipolitan/dialog-animator-swift)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DGDialogAnimator.svg)](https://img.shields.io/cocoapods/v/DGDialogAnimator.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -9,8 +10,7 @@ DGDialogAnimator
 
 `DGDialogAnimator` is a manager allowing you to quickly display **Dialogs** like **Toasts**, **Alerts** or even **Modal Form**, with only few lines of codes.
 
-![Capture](https://github.com/Digipolitan/dialog-animator-swift/blob/develop/Screenshots/capture.gif?raw=true "Capture")
-
+![Capture](https://github.com/Digipolitan/dialog-animator/blob/master/Screenshots/capture.gif?raw=true "Capture")
 
 ## Getting Started
 

@@ -31,8 +31,8 @@
 		036C7255B26479DA346D340524C5917B /* Pods-Frameworks-DGDialogAnimator-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGDialogAnimator-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		081EB11F7F7B8AA371C07141E9400221 /* Pods-Samples-DGDialogAnimatorSample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGDialogAnimatorSample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		0F1DBBED498E11B72CCFDC4517D5AF9D /* Pods-Samples-DGDialogAnimatorSample-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Samples-DGDialogAnimatorSample-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		10F332A4143CD894C946DFD3C33C1687 /* Pods_Frameworks_DGDialogAnimator_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Frameworks_DGDialogAnimator_tvOS.framework; path = "Pods-Frameworks-DGDialogAnimator-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		11679F591737231E44B54A5974D26102 /* Pods_Tests_DGDialogAnimatorTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests_DGDialogAnimatorTests_iOS.framework; path = "Pods-Tests-DGDialogAnimatorTests-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10F332A4143CD894C946DFD3C33C1687 /* Pods_Frameworks_DGDialogAnimator_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDialogAnimator_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11679F591737231E44B54A5974D26102 /* Pods_Tests_DGDialogAnimatorTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_DGDialogAnimatorTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		148F5BBC8B86C2A95DE1C8F19F44CDB2 /* Pods-Samples-DGDialogAnimatorSample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGDialogAnimatorSample-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		18AD8A7E008EF97CE687F1BAACAA7953 /* Pods-Frameworks-DGDialogAnimator-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Frameworks-DGDialogAnimator-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		21878E0DA6CFDA11B464A33E486DC54A /* Pods-Samples-DGDialogAnimatorSample-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGDialogAnimatorSample-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		3C79D9A55A47AC5B599005689D08082A /* Pods-Frameworks-DGDialogAnimator-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGDialogAnimator-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		45610B76F66AE43457810461F7B4BCB0 /* Pods-Frameworks-DGDialogAnimator-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Frameworks-DGDialogAnimator-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		47966104152F461492268B0302D5A989 /* Pods-Tests-DGDialogAnimatorTests-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-DGDialogAnimatorTests-iOS-dummy.m"; sourceTree = "<group>"; };
-		4A65EA929EDFE13CF5DD0E42E609C9D4 /* Pods_Samples_DGDialogAnimatorSample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Samples_DGDialogAnimatorSample_tvOS.framework; path = "Pods-Samples-DGDialogAnimatorSample-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A65EA929EDFE13CF5DD0E42E609C9D4 /* Pods_Samples_DGDialogAnimatorSample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Samples_DGDialogAnimatorSample_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AD12C983EFBF3C311BCAEFDC05637EB /* Pods-Frameworks-DGDialogAnimator-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Frameworks-DGDialogAnimator-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		4D46FA7ECA1659E6AC8AD5CE5357E7DB /* Pods-Samples-DGDialogAnimatorSample-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGDialogAnimatorSample-tvOS-frameworks.sh"; sourceTree = "<group>"; };
 		4E1DC490969FA9B4BD03F84C95CCED04 /* Pods-Samples-DGDialogAnimatorSample-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGDialogAnimatorSample-tvOS-resources.sh"; sourceTree = "<group>"; };
@@ -57,21 +57,21 @@
 		6B5087E7A5028A29C406F9869DD47AF1 /* Pods-Tests-DGDialogAnimatorTests-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-DGDialogAnimatorTests-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6F1EEE98C4C879EEFAFFE44A26C46110 /* Pods-Frameworks-DGDialogAnimator-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Frameworks-DGDialogAnimator-tvOS-dummy.m"; sourceTree = "<group>"; };
 		76FF63FED14DA55BC499EDF6CF25BECA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B6FC64EE5F1B05F85F4E24876475156 /* Pods-Samples-DGDialogAnimatorSample-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Samples-DGDialogAnimatorSample-tvOS.modulemap"; sourceTree = "<group>"; };
+		7B6FC64EE5F1B05F85F4E24876475156 /* Pods-Samples-DGDialogAnimatorSample-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Samples-DGDialogAnimatorSample-tvOS.modulemap"; sourceTree = "<group>"; };
 		7D6485B17017E7A84A9C024AFBFC5F06 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		801EAF2FD013F038B279200592932A69 /* Pods-Samples-DGDialogAnimatorSample-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Samples-DGDialogAnimatorSample-iOS-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96894C3E3B9DFD1E2AAEFF2083FFC6D0 /* Pods-Tests-DGDialogAnimatorTests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGDialogAnimatorTests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9BDC23A27750846570B7433294ADEFD6 /* Pods-Samples-DGDialogAnimatorSample-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Samples-DGDialogAnimatorSample-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D166C1268E85635F05415CA58B6AA2F /* Pods-Frameworks-DGDialogAnimator-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Frameworks-DGDialogAnimator-tvOS-resources.sh"; sourceTree = "<group>"; };
 		9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9EF178CE289F01DA834CD24A4C91CE32 /* Pods-Samples-DGDialogAnimatorSample-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Samples-DGDialogAnimatorSample-tvOS-umbrella.h"; sourceTree = "<group>"; };
-		A053109093283A8334B23DC7AA87D6D0 /* Pods_Frameworks_DGDialogAnimator_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Frameworks_DGDialogAnimator_iOS.framework; path = "Pods-Frameworks-DGDialogAnimator-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A053109093283A8334B23DC7AA87D6D0 /* Pods_Frameworks_DGDialogAnimator_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDialogAnimator_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09F4A1E3DCEB239E64358AE5B06AC9F /* Pods-Tests-DGDialogAnimatorTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGDialogAnimatorTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		A8106DF46A0CD1C6DEE53783B253608A /* Pods-Tests-DGDialogAnimatorTests-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Tests-DGDialogAnimatorTests-iOS.modulemap"; sourceTree = "<group>"; };
+		A8106DF46A0CD1C6DEE53783B253608A /* Pods-Tests-DGDialogAnimatorTests-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Tests-DGDialogAnimatorTests-iOS.modulemap"; sourceTree = "<group>"; };
 		A8391B0CF66F3D1A0548491FF49B625D /* Pods-Frameworks-DGDialogAnimator-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Frameworks-DGDialogAnimator-iOS-umbrella.h"; sourceTree = "<group>"; };
 		A91CE39A31542EA846EAB1C858DDCD9E /* Pods-Tests-DGDialogAnimatorTests-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGDialogAnimatorTests-tvOS-frameworks.sh"; sourceTree = "<group>"; };
-		AAFBAA8D9E4C4EE9C5031122D0AC1948 /* Pods-Frameworks-DGDialogAnimator-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Frameworks-DGDialogAnimator-iOS.modulemap"; sourceTree = "<group>"; };
+		AAFBAA8D9E4C4EE9C5031122D0AC1948 /* Pods-Frameworks-DGDialogAnimator-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Frameworks-DGDialogAnimator-iOS.modulemap"; sourceTree = "<group>"; };
 		B40A947B7D6E06F9D12D37EC3CB8307D /* Pods-Frameworks-DGDialogAnimator-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Frameworks-DGDialogAnimator-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B6D27D83466E9A2F5FBC329E4E96783E /* Pods-Samples-DGDialogAnimatorSample-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGDialogAnimatorSample-iOS-resources.sh"; sourceTree = "<group>"; };
 		B76DB3F62B5E53BCDD1F118C22945A5C /* Pods-Frameworks-DGDialogAnimator-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGDialogAnimator-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,18 +82,18 @@
 		C9245AF365CC44EBB529ADC823150584 /* Pods-Tests-DGDialogAnimatorTests-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGDialogAnimatorTests-tvOS-resources.sh"; sourceTree = "<group>"; };
 		C934DA293DEE2223C99C8D7926009781 /* Pods-Tests-DGDialogAnimatorTests-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-DGDialogAnimatorTests-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		CFC4F89AB5372F7E5F0A70A1375DCE9A /* Pods-Tests-DGDialogAnimatorTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGDialogAnimatorTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		D7426B238F66F6D432226F33084E1868 /* Pods-Frameworks-DGDialogAnimator-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Frameworks-DGDialogAnimator-tvOS.modulemap"; sourceTree = "<group>"; };
-		DA3889A21F2E6BF3209ADB8ED1478C4A /* Pods-Samples-DGDialogAnimatorSample-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Samples-DGDialogAnimatorSample-iOS.modulemap"; sourceTree = "<group>"; };
+		D7426B238F66F6D432226F33084E1868 /* Pods-Frameworks-DGDialogAnimator-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Frameworks-DGDialogAnimator-tvOS.modulemap"; sourceTree = "<group>"; };
+		DA3889A21F2E6BF3209ADB8ED1478C4A /* Pods-Samples-DGDialogAnimatorSample-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Samples-DGDialogAnimatorSample-iOS.modulemap"; sourceTree = "<group>"; };
 		DB53F0BB26FE8AD588E65FD958D1AD0F /* Pods-Samples-DGDialogAnimatorSample-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Samples-DGDialogAnimatorSample-iOS-umbrella.h"; sourceTree = "<group>"; };
 		E49DCA20829A435B084F434E3C735F0E /* Pods-Tests-DGDialogAnimatorTests-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-DGDialogAnimatorTests-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E90C35C204875A6C0B0BC6BD11691FBC /* Pods-Samples-DGDialogAnimatorSample-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Samples-DGDialogAnimatorSample-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		EDB2FF5A2CA600C702EC943D8586298D /* Pods-Frameworks-DGDialogAnimator-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Frameworks-DGDialogAnimator-iOS-dummy.m"; sourceTree = "<group>"; };
-		F13AAEB68EDE9988AB99BB6778A58EF3 /* Pods_Samples_DGDialogAnimatorSample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Samples_DGDialogAnimatorSample_iOS.framework; path = "Pods-Samples-DGDialogAnimatorSample-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13AAEB68EDE9988AB99BB6778A58EF3 /* Pods_Samples_DGDialogAnimatorSample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Samples_DGDialogAnimatorSample_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D7FCA32241D6317B44FF3B5EA59912 /* Pods-Tests-DGDialogAnimatorTests-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGDialogAnimatorTests-iOS-resources.sh"; sourceTree = "<group>"; };
-		F53F92ED85A7EA52DE7DDD921150DA59 /* Pods-Tests-DGDialogAnimatorTests-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Tests-DGDialogAnimatorTests-tvOS.modulemap"; sourceTree = "<group>"; };
+		F53F92ED85A7EA52DE7DDD921150DA59 /* Pods-Tests-DGDialogAnimatorTests-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Tests-DGDialogAnimatorTests-tvOS.modulemap"; sourceTree = "<group>"; };
 		F5A7BFC6AC5BAF8B1BED6120D85317EE /* Pods-Samples-DGDialogAnimatorSample-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGDialogAnimatorSample-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		F6DE7EDD82F7D0D3B4F8C6D5F50BA6B3 /* Pods_Tests_DGDialogAnimatorTests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests_DGDialogAnimatorTests_tvOS.framework; path = "Pods-Tests-DGDialogAnimatorTests-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6DE7EDD82F7D0D3B4F8C6D5F50BA6B3 /* Pods_Tests_DGDialogAnimatorTests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_DGDialogAnimatorTests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF64E2116914F1D9745FC556EEDFAD2 /* Pods-Tests-DGDialogAnimatorTests-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-DGDialogAnimatorTests-iOS-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -479,7 +479,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0910;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -669,19 +669,29 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -815,20 +825,30 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",

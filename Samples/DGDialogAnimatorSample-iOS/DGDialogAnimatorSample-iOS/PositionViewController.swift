@@ -55,9 +55,9 @@ class PositionViewController: UIViewController {
 	func setBackgroundFromSelection(button: UIButton) {
 		self.btns.forEach { (btn) in
 			if btn == button {
-				btn.backgroundColor = UIColor(colorLiteralRed: 255/255, green: 109/255, blue: 91/255, alpha: 1)
+				btn.backgroundColor = UIColor(red: 255/255, green: 109/255, blue: 91/255, alpha: 1)
 			} else {
-				btn.backgroundColor = UIColor(colorLiteralRed: 78/255, green: 170/255, blue: 173/255, alpha: 1)
+				btn.backgroundColor = UIColor(red: 78/255, green: 170/255, blue: 173/255, alpha: 1)
 			}
 		}
 	}
