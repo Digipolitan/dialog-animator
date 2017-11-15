@@ -1,5 +1,5 @@
 //
-//  OverStatuBarWindow.swift
+//  DialogWindow.swift
 //  DGDialogAnimator
 //
 //  Created by Benoit BRIATTE on 06/02/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DialogWindow : UIWindow {
+class DialogWindow: UIWindow {
 
     public override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         guard self.subviews.count == 2 else { // include UIViewController view and dialog
