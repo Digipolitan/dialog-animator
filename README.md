@@ -2,7 +2,7 @@ DGDialogAnimator
 ================
 
 [![Swift Version](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
-[![Build Status](https://travis-ci.org/Digipolitan/dialog-animator-swift.svg?branch=master)](https://travis-ci.org/Digipolitan/dialog-animator-swift)
+[![Build Status](https://travis-ci.org/Digipolitan/dialog-animator.svg?branch=master)](https://travis-ci.org/Digipolitan/dialog-animator)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DGDialogAnimator.svg)](https://img.shields.io/cocoapods/v/DGDialogAnimator.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/DGDialogAnimator.svg?style=flat)](http://cocoadocs.org/docsets/DGDialogAnimator.svg)
